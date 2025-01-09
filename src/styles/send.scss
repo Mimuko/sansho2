@@ -1,0 +1,167 @@
+@use "base/variables" as v;
+@use "base/mixin" as m;
+
+/*=================================================*/
+
+
+/*送信完了ページ
+/*=================================================*/
+
+.navLink {
+    color: v.$black-color;
+}
+
+.hoverImg {
+    display: block;
+}
+
+.defaultImg {
+    display: none;
+}
+
+.send-contents {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    padding: 0 6%;
+}
+
+.telLinkTxt {
+    color: v.$black-color;
+}
+
+.contactBtn {
+    border: 2px solid
+}
+
+.header {
+    & .contactBtn {
+        border: 2px solid v.$accent-color;
+    }
+}
+
+.navLink {
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 1px;
+        background: v.$black-color;
+        transition: 0.3s;
+    }
+}
+
+.navLink {
+    &:hover {
+        color: v.$black-color;
+    }
+}
+
+.header {
+    & .contactBtnTxt {
+        color: v.$accent-color;
+        ;
+    }
+}
+
+.send-contents .send-wrap {
+    max-width: 900px;
+    width: 100%;
+    margin: 14vh auto 10vh;
+    border-radius: 15px;
+}
+
+.send-contents .send-wrap .send-box {
+    border: 1px solid v.$accent-color;
+    border-radius: 15px;
+    width: inherit;
+    padding: 10% 5%;
+    background: #fff;
+}
+
+.send-contents .send-wrap .send-box .text {
+    font-size: 14px;
+    font-weight: 500;
+    color: v.$black-color;
+    line-height: 40px;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.send-contents .send-wrap .send-box .text.title {
+    font-size: 26px;
+    line-height: 40px;
+    font-weight: 700;
+    color: #fff;
+    padding: 20px 2%;
+    background: v.$accent-color;
+    text-align: center;
+}
+
+.send-contents .send-wrap .send-box .return-text-btn {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.send-contents .send-wrap .send-box .return-text-btn .top-return {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.send-contents .send-wrap .send-box .return-text-btn .top-return .return-text {
+    font-size: 18px;
+    font-weight: 500;
+    color: v.$accent-color;
+    margin: 0;
+    transition: all 0.3s;
+}
+
+
+/*ーーーートップに戻るテキストホバーの色ーーーー*/
+
+.send-contents .send-wrap .send-box .return-text-btn .top-return .return-text:hover {
+    color: v.$accent-color;
+    opacity: 0.6;
+    text-decoration: none;
+}
+
+@media (min-width: 769px) {
+    .send-contents .send-wrap {
+        margin: 14rem auto 16rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .send-contents {
+        padding: 0 45px;
+    }
+}
+
+@media (min-width: 769px) {
+    .send-contents .send-wrap .send-box {
+        padding: 10% 8%;
+    }
+}
+
+@media (min-width: 769px) {
+    .send-contents .send-wrap .send-box .text.title {
+        font-size: 45px;
+        line-height: 50px;
+    }
+}
+
+@media (min-width: 769px) {
+    .send-contents .send-wrap .send-box .text {
+        font-size: 24px;
+        padding: 40px 0;
+    }
+}
+
+@media (min-width: 769px) {
+    .send-contents .send-wrap .send-box .return-text-btn .top-return .return-text {
+        font-size: 24px;
+    }
+}

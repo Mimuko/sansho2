@@ -1,0 +1,335 @@
+@use "base/variables" as v;
+@use "base/mixin" as m;
+a:hover {
+    color: initial;
+}
+
+.pageHeader {
+    margin-block-start: 66px;
+    @include m.mq(lg) {
+        margin-block-start: 87px;
+    }
+}
+
+.l-blogPage {
+    padding: 50px 0 0;
+    @media (min-width: 1000px) {
+        padding: 80px 0 0;
+    }
+}
+
+.blogInner {
+    width: 95%;
+    margin: auto;
+    @include m.mq(lg) {
+        max-width: 1100px;
+        width: 98%;
+    }
+}
+
+.blogPage {
+    @include m.flex(flex-start, space-between);
+    flex-direction: column;
+    @include m.mq(lg) {
+        justify-content: space-between;
+        flex-direction: row;
+        column-gap: 80px;
+        margin-bottom: 140px;
+    }
+}
+
+.mainBlock {
+    max-width: 824px;
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid #9F9F9F;
+    border-radius: 4px;
+    padding: 50px 30px;
+    @include m.mq(lg) {
+        margin: 0;
+        padding: 100px 60px;
+    }
+    .article & {
+        /* 詳細ページ */
+        background: v.$white-color;
+        padding: 25px 10px 35px;
+        @include m.mq {
+            padding: 35px 20px 45px;
+        }
+        @include m.mq(lg) {
+            padding: 45px 40px 55px;
+        }
+    }
+}
+
+.rightBlock {
+    width: 100%;
+    margin: 40px 0;
+    @media (min-width: 1000px) {
+        max-width: initial;
+        max-width: 200px;
+        margin: 0;
+    }
+    & .webgene-blog {
+        width: inherit;
+        display: block;
+    }
+}
+
+.webgene-blog:has(.works) {
+    @include m.flex;
+    flex-direction: column;
+    row-gap: 24px;
+}
+
+.blog,
+.cf {
+    width: 100%;
+    transition: 0.3s;
+}
+
+.webgene-item-main-image {
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    height: auto;
+    min-height: 250px;
+    @media (min-width: 1000px) {
+        min-height: initial;
+        height: 180px;
+    }
+}
+
+.blogTag {
+    color: v.$white-color;
+    background: v.$accent-color;
+    padding: 4px 10px;
+    font-size: 14px;
+    display: inline-block;
+    border-radius: 4px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .25);
+    @include m.mq {
+        padding: 4px 20px;
+        font-size: v.$font-size-s;
+    }
+}
+
+.works,
+.worksTopLink {
+    @include m.flex(center, flex-start);
+    column-gap: 10px;
+    @include m.mq(xl) {
+        column-gap: 30px;
+    }
+}
+
+.works {
+    border-bottom: 1px solid #D9D9D9;
+    padding-bottom: 12px;
+    max-width: 700px;
+    width: 100%;
+    flex-wrap: wrap;
+    column-gap: 40px;
+    transition: all .3s ease-in;
+    @include m.mq {
+        padding-bottom: 24px;
+    }
+    &:hover {
+        background: #edecec;
+    }
+}
+
+.worksTopLink {
+    width: 100%;
+    flex-wrap: wrap;
+    row-gap: 10px;
+}
+
+.worksImgBox {
+    display: none;
+    & .webgene-item-main-image {
+        width: 100%;
+        object-fit: cover;
+        height: auto;
+        min-height: 250px;
+        @media (min-width: 1000px) {
+            min-height: initial;
+            height: 180px;
+        }
+    }
+}
+
+.blogDate {
+    color: v.$black-color;
+    text-align: left;
+    font-size: 16px;
+}
+
+.l-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 22px;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #D9D9D9;
+    padding-bottom: 23px;
+    margin-bottom: 33px;
+}
+
+.blogTit {
+    font-size: 18px;
+    color: v.$black-color;
+    @include m.mq {
+        font-size: 24px;
+    }
+    .works & {
+        font-size: 16px;
+        color: v.$black-color;
+    }
+}
+
+.category-h2 {
+    color: v.$white-color;
+    background: v.$accent-color;
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 25px;
+    font-size: v.$font-size-s;
+    border-radius: 4px;
+    &.mt-3 {
+        margin: 20px auto;
+        @include m.mq {
+            margin: 51px auto 23px!important;
+        }
+    }
+}
+
+.webgene-item.mt-2 a {
+    display: block;
+    padding-left: 20px;
+    &:hover {
+        color: v.$white-color;
+        background: v.$accent-color;
+    }
+}
+
+.webgene-pagination {
+    width: 100%;
+    margin-top: 36px;
+    @include m.mq {
+        margin-top: 76px;
+    }
+    & ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        flex-wrap: wrap;
+    }
+    & .next a,
+    & .prev a {
+        @include m.flex;
+        height: 100%;
+        margin: 0 5px;
+        display: none;
+    }
+}
+
+.number {
+    background: v.$white-color;
+    border: 1px solid v.$accent-color;
+    transition: 0.3s;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    &:hover {
+        background: v.$accent-color;
+        opacity: 0.6;
+        & a {
+            color: v.$white-color;
+        }
+    }
+    & a {
+        color: v.$accent-color;
+        display: inline-block;
+        padding: 10px 18px;
+        transition: 0.3s;
+        text-decoration: none;
+        @media (min-width: 1000px) {
+            font-size: 20px;
+        }
+    }
+    &.selected {
+        background: v.$accent-color;
+        & a {
+            color: v.$white-color;
+        }
+    }
+}
+
+
+/**********メインブロックのスタイル*********/
+
+.webgene-item-main-image {
+    width: 100%;
+    height: auto;
+    -o-object-fit: cover;
+    object-fit: cover;
+    @media (min-width: 1025px) {
+        height: 420px;
+    }
+}
+
+.archiveCategory {
+    margin-bottom: 26px;
+    & .blogDate {
+        text-align: left;
+        color: v.$accent-color;
+        white-space: nowrap;
+        @media (min-width: 768px) {
+            font-size: v.$font-size-s;
+        }
+    }
+}
+
+.blog-text p {
+    padding-top: 20px;
+    padding-bottom: 15px;
+    @media (min-width: 768px) {
+        font-size: 16px;
+        padding-top: 33px;
+    }
+}
+
+
+/* ボタン */
+
+.btn__box {
+    display: flex;
+    justify-content: center;
+    padding: 0 6%;
+    width: 100%;
+    margin: 60px 0 80px;
+    @media (min-width: 780px) {
+        min-width: 700px;
+        margin: 60px 0 140px;
+    }
+    @media (min-width: 1000px) {
+        width: 75.091%;
+    }
+}
+
+.linkBtnWrap {
+    background: v.$accent-color;
+    width: 240px;
+    & .normalBtn {
+        &::before,
+        &::after {
+            content: none;
+        }
+    }
+}
+
+.normalBtnTxt {
+    color: v.$white-color;
+    font-size: 15px;
+    font-weight: 500;
+}

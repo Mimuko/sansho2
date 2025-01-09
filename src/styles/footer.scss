@@ -1,0 +1,170 @@
+@use "base/variables" as v;
+@use "base/mixin" as m;
+
+/*--------------------------------
+	BUTTONS
+--------------------------------*/
+
+.btnBox {
+    @include m.flex(center, space-between);
+    flex-direction: column;
+    margin-top: 35px;
+    row-gap: 40px;
+    @include m.mq(lg) {
+        flex-direction: row;
+        max-width: 710px;
+        margin: 35px auto 0;
+        column-gap: 120px;
+        position: relative;
+    }
+    &::before {
+        @include m.mq(lg) {
+            content: "";
+            display: block;
+            width: 1px;
+            height: 295px;
+            background: rgba(255, 255, 255, 0.502);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+        }
+    }
+}
+
+.telBox,
+.contactBox {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    @include m.mq(lg) {
+        width: initial;
+    }
+}
+
+.commonFooter .tel {
+    text-align: center;
+    color: v.$white-color;
+    width: 100%;
+    @include m.mq(lg) {
+        max-width: 300px;
+    }
+    & .telLink {
+        justify-content: center;
+    }
+}
+
+
+/*--------------------------------
+	FOOTER
+--------------------------------*/
+
+.commonFooter {
+    color: v.$white-color;
+    & .sectionHeadTtl,
+    & .sectionHeadDesc {
+        color: v.$white-color;
+    }
+    & .txt {
+        @include m.mq(lg) {
+            text-align: center;
+        }
+    }
+}
+
+.footer {
+    background: v.$footer-color;
+    .contactBtn {
+        padding: 8px;
+    }
+}
+
+.footerRow {
+    width: 95%;
+    max-width: v.$large-width;
+    margin: 0 auto 56px;
+    align-items: center;
+    padding-top: 80px;
+    position: relative;
+    @include m.mq(lg) {
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 120px;
+    }
+}
+
+.footerInfo {
+    @include m.flex(center, center);
+    flex-direction: column;
+}
+
+.footerLogo {
+    display: flex;
+    justify-content: center;
+    max-width: 169px;
+    margin-bottom: 24px;
+    @include m.mq {
+        justify-content: flex-start;
+    }
+}
+
+.footerLink {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 25px;
+    justify-content: center;
+    @include m.mq {
+        width: 80%;
+        justify-content: flex-start;
+    }
+    @include m.mq(lg) {
+        column-gap: 25px;
+        row-gap: 20px;
+        width: 100%;
+        max-width: 557px;
+    }
+}
+
+.footerCopy {
+    width: 100%;
+    @include m.flex(center, center);
+    padding: 16px 0;
+    position: relative;
+    margin-top: 32px;
+    color: v.$white-color;
+    font-size: 12px;
+    @include m.mq {
+        margin-top: 0;
+        max-width: v.$large-width;
+        margin: 0 auto;
+    }
+    & .txt {
+        font-size: inherit;
+    }
+}
+
+.footerInfoItem {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-bottom: 16px;
+    column-gap: 16px;
+}
+
+.footerAddress {
+    text-align: center;
+    @include m.mq(lg) {
+        text-align: left;
+    }
+    & .txt {
+        text-align: center;
+        @include m.mq(lg) {
+            text-align-last: left;
+        }
+    }
+}

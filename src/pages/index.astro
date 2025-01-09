@@ -1,11 +1,330 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import '../styles/base/_mixin.scss';
+import '../styles/base/_reset.scss';
+import '../styles/base/_variables.scss';
+import '../styles/header.scss';
+import '../styles/footer.scss';
+import '../styles/common.scss';
+import '../styles/top.scss';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Header from '../components/header.astro';
+import Footer from '../components/footer.astro';
+import Head from '../components/head.astro';
+
+
+const pageTitle = "トップページ｜華満グループ";
+const siteDomein = "https://hanaman-group.com/system_panel/uploads/images/";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<Head />
+	<title>{pageTitle}</title>
+</head>
+
+<body class="wrap">
+	<Header />
+    <main class="content">
+        <div class="fvLinkFlex">
+            <a href="#hikawahonten" class="fvLink">
+                <div class="backBgc">
+                    <img src={siteDomein + '20240806122919475481.png'} alt="華満斐川本店・ホテル華満" class="backImg">
+                </div>
+                <div class="logoImgBox hikawahonten">
+                    <img src={siteDomein + '20240806123218586100.png'} alt="華満斐川本店・ホテル華満" class="commonImg">
+                </div>
+            </a>
+            <a href="#izumoekimaeten" class="fvLink">
+                <div class="backBgc">
+                    <img src={siteDomein + '20240806144608964558.png'} alt="華満出雲駅前店" class="backImg">
+                </div>
+                <div class="logoImgBox izumoekimae">
+                    <img src={siteDomein + '20240725232921858046.png'} alt="華満出雲駅前店" class="commonImg">
+                </div>
+            </a>
+            <a href="#wakaimon" class="fvLink">
+                <div class="backBgc">
+                    <img src={siteDomein + '20240725232908635668.png'} alt="居酒屋 和皆門" class="backImg">
+                </div>
+                <div class="logoImgBox wakaimon">
+                    <img src={siteDomein + '20240725232921483993.png'} alt="居酒屋 和皆門" class="commonImg">
+                </div>
+            </a>
+            <a href="#izumo" class="fvLink">
+                <div class="backBgc">
+                    <img src={siteDomein + '20240725232908232997.png'} alt="居酒屋 いずも" class="backImg">
+                </div>
+                <div class="logoImgBox izumo">
+                    <img src={siteDomein + '20240725232908133238.png'} alt="居酒屋 いずも" class="commonImg">
+                </div>
+            </a>
+        </div>
+        <section class="section sectionBg conceptSection">
+            <div class="sectionBgImg">
+                <img src={siteDomein + '20240727104844876807.png'} alt="背景用の画像" width="1440" height="567" class="img">
+            </div>
+            <div class="sectionInr">
+                <div class="flex">
+                    <div class="txtBox">
+                        <div class="conceptTtl">
+                            <div class="conceptTtlBg">
+                                <p class="fontBlack">華満グループの</p>
+                            </div>
+                            <div class="conceptTtlBg">
+                                <p class="fontRed">和食</p>
+                                <p class="fontBlack">と</p>
+                                <p class="fontOrange">居酒屋</p>
+                                <p class="fontBlack">、</p>
+                            </div>
+                            <div class="conceptTtlBg">
+                                <h1 class="conceptTtlTxt">心からのおもてなし</h1>
+                            </div>
+                        </div>
+                        <div class="conceptTxt">
+                            <p class="txt">華満グループは、島根県出雲市を中心に日本料理店、ホテル、居酒屋を運営しています。</p>
+                            <p class="txt">華満グループは地元の新鮮な食材を使った和食や郷土料理、創作料理を提供し、様々なニーズに対応しています。</p>
+                            <p class="txt">会合、法要、お祝い、ご宴会、ご家族でのお食事など、多目的にご利用いただけます。</p>
+                            <p class="txt">お客様一人ひとりに満足いただけるよう真心を込めたサービスを心がけています。</p>
+                        </div>
+                    </div>
+                    <div class="imgBox overlayImg">
+                        <img src={siteDomein + '20240806122919823507.png'} alt="提供するお料理のイメージ画像" width="203" height="213" class="smallImg">
+                        <img src={siteDomein + '20240725232908261210.png'} alt="提供するお料理のイメージ画像" width="292" height="316" class="largeImg">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section newsSection">
+            <div class="sectionInr">
+                <div class="sectionHead">
+                    <h2 class="sectionHeadTtl">新着情報</h2>
+                    <p class="sectionHeadDesc">News</p>
+                </div>
+                <div class="newsArea">
+                    <p>データブロックエリア</p>
+                </div>
+                <a href="./news" class="normalBtn">
+                    <p class="normalBtnTxt">記事一覧</p>
+                </a>
+            </div>
+            <div class="decoration decorationRight">
+                <img src={siteDomein + '20240725232908961702.png'} alt="装飾用の画像" width="152" height="83">
+            </div>
+            <div class="decoration decorationLeft">
+                <img src={siteDomein + '20240725232908222886.png'} alt="装飾用の画像" width="130" height="71">
+            </div>
+        </section>
+        <section class="section shopSection" id="hikawahonten">
+            <div class="pageHeader">
+                <div class="pageHeaderBg">
+                    <img width="1440" height="410" src={siteDomein + '20240806122919221151.png'} alt="斐川本店・ホテル華満" class="pageHeaderImg">
+                </div>
+                <div class="pageHeaderGroup">
+                    <h2 class="pageHeaderFront">
+                        <img width="311" height="156" src={siteDomein + '20240806123218586100.png'} alt="華満 斐川本店・ホテル華満">
+                    </h2>
+                </div>
+            </div>
+            <div class="sectionInr">
+                <div class="flex">
+                    <div class="googleMap">
+                        <p>データブロックエリア</p>
+                    </div>
+                    <div class="txtBox">
+                        <p class="txt">
+                            長年にわたり、皆さまにご愛顧いただき、心より感謝申し上げます。宴会やご法要、ご慶祝など、お客様のご要望やご予算に応じて最適なプランを提供させていただきます。<br>
+                            無料送迎サービスや、ホテルの宿泊も承っておりますので、どうぞお気軽にお問い合わせください。<br>
+                            これからも皆さまに満足していただけるよう、心を込めたサービスを提供し続けてまいります。<br>
+                        </p>
+                        <div class="btns">
+                            <div class="btnWrap">
+                                <a href="./hikawahonten" class="normalBtn">
+                                    <p class="normalBtnTxt">華満斐川本店</p>
+                                </a>
+                                <a href="./hikawahonten#stay" class="normalBtn bgBrown">
+                                    <p class="normalBtnTxt">ホテル華満</p>
+                                </a>
+                            </div>
+                            <div class="tel">
+                                <a href="tel:0853725800" class="telLink">
+                                    <img src={siteDomein + '20240726120642484785.png'} alt="電話アイコン画像" width="24" height="24" class="img">
+                                    <p class="telLinkTxt">0853-72-5800</p>
+                                </a>
+                                <p class="txt">受付時間:11:00-21:30/定休日:火曜日</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section shopSection" id="izumoekimaeten">
+            <div class="pageHeader">
+                <div class="pageHeaderBg">
+                    <img width="1440" height="410" src={siteDomein + '20240725232908859647.png'} alt="華満 出雲駅前店" class="pageHeaderImg">
+                </div>
+                <div class="pageHeaderGroup">
+                    <h2 class="pageHeaderFront">
+                        <img width="200" height="138" src={siteDomein + '20240725232921858046.png'} alt="華満 出雲駅前店">
+                    </h2>
+                </div>
+            </div>
+            <div class="sectionInr">
+                <div class="flex flex-reverse">
+                    <div class="googleMap">
+                        <p>データブロックエリア</p>
+                    </div>
+                    <div class="txtBox">
+                        <p class="txt">新鮮な魚介、しまね和牛、蕎麦など、地元の厳選された食材を使い、「山陰の味」を存分にお楽しみいただけます。<br>
+                            私たちは、お客様のご要望やご予算に応じたメニューをご提供し、宴会やご法要、ご家族のお食事など、様々なシーンに対応いたします。<br>
+                            温かいおもてなしと共に、地元の魅力あふれる料理をお楽しみください。<br>
+                            どのようなご利用目的でも、心を込めたサービスでお迎えいたします。
+                        </p>
+                        <div class="btns">
+                            <a href="./izumoekimae" class="normalBtn">
+                                <p class="normalBtnTxt">華満出雲駅前店</p>
+                            </a>
+                            <div class="tel">
+                                <a href="tel:0853213913" class="telLink">
+                                    <img src={siteDomein + '20240726120642484785.png'} alt="電話アイコン画像" width="24" height="24" class="img">
+                                    <p class="telLinkTxt">0853-21-3913</p>
+                                </a>
+                                <p class="txt">受付時間:14:30-21:30/定休日:月曜日</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section shopSection" id="wakaimon">
+            <div class="pageHeader">
+                <div class="pageHeaderBg">
+                    <img width="1440" height="410" src={siteDomein + '20240725232908267439.png'} alt="居酒屋 和皆門" class="pageHeaderImg">
+                </div>
+                <div class="pageHeaderGroup">
+                    <h2 class="pageHeaderFront">
+                        <img width="200" height="138" src={siteDomein + '20240725232921483993.png'} alt="居酒屋 和皆門">
+                    </h2>
+                </div>
+            </div>
+            <div class="sectionInr">
+                <div class="flex">
+                    <div class="googleMap">
+                        <p>データブロックエリア</p>
+                    </div>
+                    <div class="txtBox">
+                        <p class="txt">豊富なジャンルの料理で、約200種のメニューを用意しております。<br>
+                            <br>
+                            和食から洋食まで幅広い選択肢があり、お客様の多様なニーズに対応いたします。<br>
+                            また、プライベートな空間を重視されるお客様のために、個室も多く用意しておりますので、ご予約の際にはお気軽にお申し付けください。<br>
+                        </p>
+                        <div class="btns">
+                            <a href="./wakaimon" class="normalBtn">
+                                <p class="normalBtnTxt">居酒屋 和皆門</p>
+                            </a>
+                            <div class="tel">
+                                <a href="tel:0853-72-5888" class="telLink">
+                                    <img src={siteDomein + '20240726120642484785.png'} alt="電話アイコン画像" width="24" height="24" class="img">
+                                    <p class="telLinkTxt">0853-72-5888</p>
+                                </a>
+                                <p class="txt">受付時間:17:00-23:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section shopSection" id="izumo">
+            <div class="pageHeader">
+                <div class="pageHeaderBg">
+                    <img width="1440" height="410" src={siteDomein + '20240725232908845707.png'} alt="居酒屋 いずも" class="pageHeaderImg">
+                </div>
+                <div class="pageHeaderGroup">
+                    <h2 class="pageHeaderFront">
+                        <img width="200" height="138" src={siteDomein + '20240725232908133238.png'} alt="居酒屋 いずも">
+                    </h2>
+                </div>
+            </div>
+            <div class="sectionInr">
+                <div class="flex flex-reverse">
+                    <div class="googleMap">
+                        <p>データブロックエリア</p>
+                    </div>
+                    <div class="txtBox">
+                        <p class="txt">のどぐろ、甘鯛、松葉かに、しじみ、出雲そばなどの「山陰産メニュー」をはじめ、約200種の豊富なメニューを用意しております。<br>
+                            これに加えて、島根の地酒も各種取り揃えており、地元の味わいを存分にお楽しみいただけます。<br>
+                            地元の新鮮な食材を使用した料理と共に、お客様に満足していただけるひとときを提供することを目指しています。<br>
+                            特別な食事の時間を、ぜひ居酒屋 いずもでお過ごしください。
+                        </p>
+                        <div class="btns">
+                            <a href="./izumo" class="normalBtn">
+                                <p class="normalBtnTxt">居酒屋 いずも</p>
+                            </a>
+                            <div class="tel">
+                                <a href="tel:0853-24-7372" class="telLink">
+                                    <img src={siteDomein + '20240726120642484785.png'} alt="電話アイコン画像" width="24" height="24" class="img">
+                                    <p class="telLinkTxt">0853-24-7372</p>
+                                </a>
+                                <p class="txt">受付時間:17:00-23:00/定休日:火曜日</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section recruitSection sectionBg">
+            <div class="recruitSectionHead">
+                <h2 class="recruitSectionTtl">recruit</h2>
+                <p class="recruitSectionDesc">採用情報</p>
+            </div>
+            <div class="sectionBgImg">
+                <img src={siteDomein + '20240727104844752318.png'} alt="背景用の画像" width="1440" height="730" class="img" />
+            </div>
+            <div class="sectionInr recruitRow">
+                <div class="txtBox">
+                    <h3 class="txtBoxTtl">華満グループでは<br>一緒に働いてくれる仲間を募集しております</h3>
+                    <p class="txt">
+                        華満グループでは、お客様に美味しい食事と心地よいサービスを提供できる仲間を求めています。<br>
+                        料理の腕や経験はもちろん大切ですが、笑顔やおもてなしの心も重視しています。<br>
+                        <br>
+                        お互いに協力し合いながら働ける環境を整えています。<br>
+                        飲食業の未経験者も歓迎です。<br>
+                        一緒においしい料理を提供し、お客様に喜んでいただける瞬間を共有しませんか？<br>
+                        興味のある方はぜひお気軽にご応募ください。
+                    </p>
+                </div>
+                <div class="imgBox overlayImg">
+                    <img src={siteDomein + '20240725232908779613.png'} alt="華満グループ店舗にて接客しているイメージ画像" width="303" height="196" class="smallImg">
+                    <img src={siteDomein + '20240725232908604571.png'} alt="従業員のイメージ画像" width="344" height="442" class="largeImg">
+                </div>
+                <a href="./recruit" class="normalBtn">
+                    <p class="normalBtnTxt">採用情報</p>
+                </a>
+            </div>
+        </section>
+
+        <div class="linkSection">
+            <div class="sectionInr">
+                <div class="linkBox">
+                    <a href="./company" class="imgLink">
+                        <img src={siteDomein + '20240726225758301022.png'} alt="運営会社 背景用の画像" class="backImg" />
+                        <div class="front">
+                            <p class="frontTxt">運営会社</p>
+                            <p class="frontDesc">company</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+	<Footer />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+
+</html>

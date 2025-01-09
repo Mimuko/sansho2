@@ -1,0 +1,597 @@
+@use "base/variables" as v;
+@use "base/mixin" as m;
+
+/*--------------------------------
+	FIRST VIEW
+--------------------------------*/
+
+.fvLinkFlex {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 490px;
+    margin-top: 66px;
+    @include m.mq(md) {
+        flex-flow: initial;
+    }
+    @include m.mq(lg) {
+        height: 565px;
+        margin-top: 87px;
+    }
+}
+
+.fvLink {
+    width: 50%;
+    height: 50%;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+    @include m.mq {
+        width: 100%;
+        height: 100%;
+    }
+    &:hover {
+        .backBgc {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.backBgc {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: 0.3s;
+}
+
+.backImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: top;
+    transition: all 0.4s ease-in-out;
+}
+
+.logoImgBox {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    @include m.flex(center, center);
+    z-index: 5;
+    &.hikawahonten {
+        width: 155px;
+        @include m.mq(lg) {
+            width: 236px;
+        }
+    }
+    &.izumoekimae {
+        width: 110px;
+        @include m.mq(lg) {
+            width: 168px;
+        }
+    }
+    &.wakaimon {
+        width: 130px;
+        @include m.mq(lg) {
+            width: 178px;
+        }
+    }
+    &.izumo {
+        width: 130px;
+        @include m.mq(lg) {
+            width: 179px;
+        }
+    }
+}
+
+
+/*--------------------------------
+	IMAGE
+--------------------------------*/
+
+.img {
+    width: 100%;
+    display: block;
+}
+
+.overlayImg {
+    position: relative;
+    z-index: 0;
+    & .smallImg,
+    & .largeImg {
+        width: 100%;
+        position: absolute;
+    }
+}
+
+
+/*--------------------------------
+	CONCEPT
+--------------------------------*/
+
+.conceptSection {
+    & .flex {
+        @include m.mq(lg) {
+            column-gap: 40px;
+            flex-direction: row-reverse;
+        }
+        @include m.mq(xl) {
+            column-gap: 80px;
+        }
+    }
+    & .txtBox {
+        @include m.mq(lg) {
+            direction: ltr;
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+            letter-spacing: .2em;
+            color: v.$black-color;
+            text-align: left;
+            display: inline-block;
+            line-height: 1;
+            overflow-y: auto;
+            height: 320px;
+        }
+    }
+    & .overlayImg {
+        height: 410px;
+        @include m.mq(md) {
+            height: 700px;
+        }
+        @include m.mq(lg) {
+            width: 400px;
+            height: 383px;
+        }
+        @include m.mq(xl) {
+            width: 385px;
+        }
+    }
+    & .smallImg {
+        width: 50%;
+        right: 0;
+        bottom: 0;
+        z-index: 3;
+        @include m.mq(lg) {
+            width: 203px;
+            height: 213px;
+        }
+    }
+    & .largeImg {
+        width: 80%;
+        top: 0;
+        left: 0;
+        @include m.mq(lg) {
+            width: 292px;
+            height: 318px;
+        }
+    }
+}
+
+.conceptTtl {
+    font-family: v.$heading-font;
+    font-size: v.$font-size-m;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    margin-block-end: 67px;
+    line-height: 1.1;
+    writing-mode: vertical-rl;
+    margin-block: auto;
+    margin-inline-end: 50px;
+    @include m.mq(lg) {
+        margin-block-end: 50px;
+        margin-inline-end: 0;
+    }
+    @include m.mq(xl) {
+        margin-block-end: 67px;
+    }
+}
+
+.conceptTtlBg {
+    @include m.flex(flex-start, flex-start);
+    background: v.$white-color;
+    height: fit-content;
+    padding-block: 6px;
+    padding-inline: 10px;
+}
+
+.conceptTxt {
+    & .txt {
+        line-height: 1.45;
+        letter-spacing: 0.08em;
+        text-align: left;
+        margin-block-end: 50px;
+        @include m.mq(lg) {
+            margin-block-end: 30px;
+        }
+        @include m.mq(xl) {
+            margin-block-end: 50px;
+        }
+        &:last-of-type {
+            margin-block-end: 0;
+        }
+    }
+}
+
+
+/*--------------------------------
+	SHOP INFO
+--------------------------------*/
+
+.shopSection {
+    & .sectionInr {
+        width: 100%;
+        padding: 40px 0 50px;
+        @include m.mq(lg) {
+            padding: 80px 0 100px;
+        }
+    }
+    & .flex {
+        row-gap: 40px;
+        @include m.mq(lg) {
+            width: 95%;
+            margin: auto;
+            column-gap: 80px;
+            align-items: stretch;
+        }
+        @include m.mq(xl) {
+            width: 100%;
+        }
+        &.flex-reverse {
+            @include m.mq(lg) {
+                flex-direction: row-reverse;
+            }
+        }
+    }
+    & .googleMap {
+        background: v.$black-color;
+        width: 90%;
+        margin: auto;
+        @include m.mq(lg) {
+            max-width: 500px;
+            width: 100%;
+            height: 340px;
+            margin: 0;
+        }
+    }
+    & .txtBox {
+        @include m.flex(unset, space-between);
+        flex-direction: column;
+        row-gap: 20px;
+        width: 90%;
+        margin: auto;
+        @include m.mq(lg) {
+            width: 100%;
+            margin: 0;
+        }
+    }
+    & .btns {
+        @include m.flex(flex-start, center);
+        flex-direction: column;
+        flex-wrap: wrap;
+        row-gap: 30px;
+        @include m.mq(lg) {
+            align-items: center;
+            flex-direction: row;
+            column-gap: 30px;
+        }
+    }
+    & .tel {
+        @include m.flex(center, flex-start);
+        flex-direction: column;
+        row-gap: 4px;
+        @include m.mq(lg) {
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+    }
+}
+
+.btnWrap {
+    @include m.flex;
+    flex-direction: column;
+    row-gap: 10px;
+    width: 100%;
+    @include m.mq(xl) {
+        flex: 1;
+        width: auto;
+    }
+}
+
+
+/*--------------------------------
+	LINK
+--------------------------------*/
+
+.linkSection {
+    padding: 40px 0 38px;
+    @media (min-width: 1024px) {
+        padding: 80px 0 75px;
+    }
+    & .sectionInr {
+        max-width: fit-content;
+        padding: 0;
+    }
+}
+
+.linkBox {
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3);
+    height: fit-content;
+    @include m.mq(lg) {
+        max-width: 980px;
+        width: 100%;
+        &:hover {
+            & .backImg {
+                scale: 1.1 1.1;
+            }
+        }
+    }
+}
+
+.imgLink {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.front {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    @include m.flex(flex-start, center);
+    flex-direction: column;
+    font-size: v.$font-size-m;
+    color: v.$white-color;
+    z-index: 3;
+    line-height: 1.5;
+    left: 50px;
+    @include m.mq(lg) {
+        left: 100px;
+        right: auto;
+        font-size: v.$font-size-l;
+    }
+}
+
+.frontDesc {
+    font-family: v.$alpha-font;
+    font-size: 14px;
+    color: v.$white-color;
+    font-weight: 500;
+    margin-top: 5px;
+    line-height: 1.2;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    @include m.mq {
+        font-size: v.$font-size-s;
+    }
+}
+
+
+/*--------------------------------
+	RECRUIT
+--------------------------------*/
+
+.recruitSection {
+    margin-top: 50px;
+    @include m.mq {
+        margin-top: 100px;
+    }
+}
+
+.recruitSectionHead {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: fit-content;
+    z-index: 3;
+    text-align: center;
+    top: -40px;
+    @include m.mq(lg) {
+        top: -62px;
+    }
+}
+
+.recruitSectionTtl {
+    color: v.$accent-color;
+    font-size: 76px;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+    font-family: v.$alpha-font;
+    line-height: 1;
+    overflow: hidden;
+    @include m.mq(sm) {
+        font-size: 80px;
+    }
+    @include m.mq(lg) {
+        font-size: 130px;
+    }
+}
+
+.recruitSectionDesc {
+    color: v.$white-color;
+    font-size: v.$font-size-s;
+    letter-spacing: 0.08em;
+}
+
+.recruitRow {
+    display: grid;
+    gap: 20px;
+    padding: 90px 0 50px;
+    @include m.mq(lg) {
+        padding: 160px 0 100px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr auto;
+        column-gap: 74px;
+        row-gap: 35px;
+    }
+    & .txtBox {
+        color: v.$white-color;
+        letter-spacing: 0.04em;
+        @include m.mq(lg) {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+        }
+    }
+    & .txtBoxTtl {
+        font-size: 18px;
+        margin-bottom: 35px;
+        letter-spacing: 0.08em;
+        @include m.mq(sm) {
+            font-size: 20px;
+        }
+    }
+    & .overlayImg {
+        height: 420px;
+        @include m.mq(md) {
+            height: 780px;
+        }
+        @include m.mq(lg) {
+            height: 464px;
+            width: 527px;
+            grid-column: 2 / 3;
+            grid-row: 1 / 3;
+        }
+    }
+    & .normalBtn {
+        @include m.mq(lg) {
+            justify-items: start;
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+            margin: 0;
+        }
+    }
+    & .smallImg {
+        width: 70%;
+        left: 0;
+        bottom: 0;
+        z-index: 2;
+        @include m.mq(lg) {
+            width: 303px;
+        }
+    }
+    & .largeImg {
+        width: 80%;
+        top: 0;
+        right: 0;
+        @include m.mq(lg) {
+            width: 344px;
+        }
+    }
+}
+
+
+/*--------------------------------
+	NEWS
+--------------------------------*/
+
+.newsSection {
+    position: relative;
+    & .sectionInr {
+        padding: 90px 0;
+        display: grid;
+        @media (min-width: 1024px) {
+            grid-template-columns: 230px 1fr;
+            grid-template-rows: auto auto;
+            -moz-column-gap: 90px;
+            column-gap: 90px;
+        }
+    }
+    & .sectionHead {
+        justify-content: flex-start;
+        @media (min-width: 1024px) {
+            align-items: flex-start;
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+        }
+    }
+    & .normalBtn {
+        margin-top: 40px;
+        height: fit-content;
+        @media (min-width: 1024px) {
+            margin-top: 0;
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+            width: 100%;
+            align-self: flex-end;
+        }
+    }
+    & .decoration {
+        display: none;
+        @include m.mq(xl) {
+            display: block;
+            position: absolute;
+        }
+    }
+    & .decorationRight {
+        right: 60px;
+        top: 280px;
+    }
+    & .decorationLeft {
+        left: 35px;
+        top: 34px;
+    }
+}
+
+.newsArea {
+    width: 95%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 0;
+    @media (min-width: 1024px) {
+        width: 100%;
+        grid-column: 2 / 3;
+        grid-row: 1 / 3;
+    }
+}
+
+.newsItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 4px;
+    padding: 16px 0;
+    @media (min-width: 768px) {
+        flex-direction: row;
+        column-gap: 184px;
+    }
+    &:hover {
+        background-color: #edecec;
+        color: inherit;
+    }
+}
+
+.newsTag {
+    display: none;
+}
+
+.webgene-blog {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+}
+
+.webgene-item {
+    &:nth-child(2) {
+        & .newsItem {
+            border-top: 1px solid #E5E5E5;
+            border-bottom: 1px solid #E5E5E5;
+            padding-bottom: 16px;
+        }
+    }
+}

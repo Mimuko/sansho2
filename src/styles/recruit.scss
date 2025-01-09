@@ -1,0 +1,848 @@
+@use "base/variables" as v;
+@use "base/mixin" as m;
+
+/*--------------------------------
+	RECRUIT
+--------------------------------*/
+
+.pageHeader {
+    margin-block-start: 66px;
+    @include m.mq(lg) {
+        margin-block-start: 87px;
+    }
+}
+
+.recruitSectionHead {
+    @include m.mq(lg) {
+        height: 175px;
+        max-width: 1100px;
+        margin: auto;
+        position: relative;
+    }
+}
+
+.recruitSectionHeadWrap {
+    @include m.flex(stretch, flex-start);
+    flex-direction: column;
+    width: 95%;
+    margin: auto;
+    @include m.mq(lg) {
+        align-items: baseline;
+        flex-direction: row;
+        position: absolute;
+        left: 0;
+        bottom: -20px;
+    }
+}
+
+.recruitSectionHeadTtl {
+    color: v.$accent-color;
+    font-size: 80px;
+    font-weight: 700;
+    font-family: v.$alpha-font;
+    text-transform: uppercase;
+    line-height: 1;
+    @include m.mq(lg) {
+        font-size: 180px;
+    }
+}
+
+.recruitSectionHeadDesc {
+    text-align: right;
+    font-size: v.$font-size-s;
+}
+
+.recruitSectionBody {
+    padding: 40px 0;
+    @include m.mq(lg) {
+        padding: 90px 0;
+        margin: auto;
+        max-width: 1100px;
+    }
+}
+
+.recruitBox {
+    background: v.$white-color;
+    padding: 20px 10px;
+    width: 95%;
+    margin: auto;
+    @include m.mq(lg) {
+        padding: 50px 45px;
+        width: 100%;
+        max-width: 610px;
+        margin-right: auto;
+        margin-left: 0;
+    }
+}
+
+.recruitBoxHead {
+    margin-bottom: 30px;
+}
+
+.recruitBoxHeadTtl {
+    font-family: v.$heading-font;
+    font-size: 20px;
+    line-height: 1.8;
+    @include m.flex(flex-start, flex-start);
+    flex-direction: column;
+    row-gap: 3px;
+    font-weight: 700;
+    @include m.mq(lg) {
+        font-size: 26px;
+    }
+    &>p {
+        display: inline-block;
+        background: v.$accent-color;
+        color: v.$white-color;
+        padding: 0 10px;
+    }
+}
+
+.decoration {
+    display: none;
+    @include m.mq(xl) {
+        display: block;
+        position: absolute;
+        z-index: 1;
+    }
+    &.decorationTopRight {
+        top: 100px;
+        right: 34px;
+    }
+    &.decorationBottomRight {
+        bottom: -80px;
+        right: 0;
+    }
+    &.decorationTopLeft {
+        top: 26px;
+        left: 50px;
+    }
+    &.decorationBottomLeft {
+        bottom: -60px;
+        left: 45px;
+    }
+}
+
+
+/*--------------------------------
+	TABLE
+--------------------------------*/
+
+.table {
+    color: v.$black-color;
+    border: 1px solid #F5F5F5;
+    @include m.mq(lg) {
+        max-width: 947px;
+        width: 100%;
+        margin: auto;
+    }
+}
+
+.tableItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: v.$white-color;
+    width: 100%;
+    border-bottom: 1px solid #F5F5F5;
+    @include m.mq {
+        flex-direction: row;
+    }
+}
+
+.tableHead {
+    border: 1px solid v.$white-color;
+    background: #F5F5F5;
+    padding: 15px 20px;
+    width: 100%;
+    letter-spacing: -0.03em;
+    flex-shrink: 0;
+    @include m.mq {
+        max-width: 183px;
+        padding: 15px 20px;
+    }
+}
+
+.tableBody {
+    background: v.$white-color;
+    flex-grow: 1;
+    padding: 15px 20px;
+    @include m.mq {
+        padding: 15px 10px 15px 40px;
+    }
+    &:not(:last-of-type) {
+        border-bottom: 1px solid #F5F5F5;
+    }
+    & .normalBtn {
+        padding: 10px 0;
+        margin: 10px auto 0 0;
+    }
+}
+
+
+/*=================================================*/
+
+
+/*エントリーフォーム
+/*=================================================*/
+
+input,
+select,
+textarea {
+    appearance: auto;
+    font-family: v.$text-font;
+}
+
+::-webkit-input-placeholder {
+    font-family: v.$text-font;
+}
+
+::-moz-placeholder {
+    font-family: v.$text-font;
+}
+
+:-ms-input-placeholder {
+    font-family: v.$text-font;
+}
+
+::-ms-input-placeholder {
+    font-family: v.$text-font;
+}
+
+::placeholder {
+    font-family: v.$text-font;
+}
+
+.page-contact {
+    width: 100%;
+    max-width: 846px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.item {
+    @include m.flex(unset, flex-start);
+    flex-direction: column;
+    @include m.mq(lg) {
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        gap: 34px;
+    }
+    &.item-start {
+        @include m.mq {
+            align-items: flex-start;
+        }
+    }
+    &.flex-start {
+        align-items: flex-start;
+    }
+    &.address {
+        & .l-desc {
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+            & .fieldset {
+                row-gap: 10px;
+                &.flex {
+                    display: flex;
+                    gap: 11px;
+                    align-items: flex-start;
+                    @include m.mq(lg) {
+                        align-items: center;
+                    }
+                }
+                &.num {
+                    display: flex;
+                    gap: 6px;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}
+
+.l-tit {
+    width: 100%;
+    margin-bottom: 3px;
+    @include m.flex(center, flex-start);
+    flex: 1;
+    @media (min-width: 1024px) {
+        justify-content: flex-end;
+        width: calc(100% - 600px);
+        margin: 0;
+    }
+}
+
+.tit {
+    font-family: v.$text-font;
+    color: v.$black-color;
+    font-size: v.$font-size-s;
+}
+
+.l-desc {
+    max-width: initial;
+    width: 100%;
+    margin: 0;
+    @include m.mq(lg) {
+        margin-top: 0px;
+        max-width: 600px;
+    }
+    & .l-desc {
+        & .l-desc-flex {
+            display: flex;
+            align-items: flex-end;
+            @media (min-width: 900px) {
+                width: 489px;
+                align-items: center;
+                justify-content: space-between;
+                gap: 0 20px;
+            }
+            & .desc-flex {
+                display: block;
+                @media (min-width: 900px) {
+                    display: flex;
+                    align-items: flex-start;
+                }
+                & #regular {
+                    max-width: initial;
+                    width: 100%;
+                    height: 40px;
+                    background: v.$white-color;
+                    border: 2px solid #000;
+                    box-sizing: border-box;
+                    border-radius: 4px;
+                }
+            }
+            &:last-of-type {
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+@media (min-width: 900px) {
+    .item .l-desc .l-desc-flex .desc-flex .content {
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 900px) {
+    .item .l-desc .l-desc-flex .number {
+        margin-left: 0;
+    }
+}
+
+.l-desc input[type=tel] {
+    width: 100%;
+    max-width: 89px;
+    height: 40px;
+    background: v.$white-color;
+    border: 2px solid #000;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-family: v.$text-font;
+}
+
+.addressLabel {
+    display: block;
+    width: 72px;
+    color: v.$black-color;
+    font-size: v.$font-size-s;
+    white-space: nowrap;
+    &.zipMark {
+        width: 16px;
+    }
+}
+
+.fieldset select {
+    -webkit-appearance: auto;
+    -moz-appearance: auto;
+    appearance: auto;
+    width: 100%;
+    height: 40px;
+    border-radius: 4px;
+    border: 2px solid #000;
+    background: v.$white-color;
+}
+
+.item .l-desc .l-desc-flex .desc-flex input {
+    flex: 1;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
+    max-width: initial;
+    width: 100%;
+    height: 40px;
+    background: v.$white-color;
+    border: 2px solid #000;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.radioArea {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px 20px;
+    margin-top: 10px;
+    @include m.mq {
+        margin-top: 0px;
+        max-width: 600px;
+        width: 100%;
+    }
+    @media (min-width: 768px) {}
+}
+
+.radioArea .radioFlex,
+.radioArea .radioFlex {
+    display: flex;
+    -moz-column-gap: 3px;
+    column-gap: 3px;
+    align-items: center;
+}
+
+textarea {
+    max-width: initial;
+    width: 100%;
+    height: 150px;
+    background: v.$white-color;
+    border: 2px solid #000;
+    box-sizing: border-box;
+    border-radius: 4px;
+    @media (min-width: 1024px) {
+        max-width: 600px;
+        height: 240px;
+    }
+}
+
+.indispensable {
+    padding: 2px 4px;
+    color: v.$white-color;
+    font-size: 13px;
+    line-height: 1.4;
+    border-radius: 4px;
+    margin-left: 8px;
+    background: v.$accent-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.l-privacy-checked {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.l-privacy-checked input {
+    margin-right: 5px;
+    -webkit-appearance: auto;
+    -moz-appearance: auto;
+    appearance: auto;
+}
+
+.l-privacy-checked .desc {
+    margin: 0;
+    font-size: 16px;
+    line-height: 23px;
+    text-align: center;
+}
+
+@media (min-width: 1000px) {
+    .l-privacy-checked .desc {
+        font-size: 16px;
+    }
+}
+
+.l-privacy-checked .desc .sp {
+    display: block;
+}
+
+@media (min-width: 600px) {
+    .l-privacy-checked .desc .sp {
+        display: none;
+    }
+}
+
+@media (min-width: 600px) {
+    .l-privacy-checked .desc {
+        text-align: left;
+    }
+}
+
+.l-privacy-checked .desc a {
+    color: v.$accent-color;
+    text-align: center;
+}
+
+.l-privacy-checked .desc a:hover {
+    color: v.$black-color;
+}
+
+.btn__box {
+    margin: 28px 0 0 0;
+}
+
+@media (min-width: 1000px) {
+    .btn__box {
+        margin: 40px auto 0;
+    }
+}
+
+.btn__box.ab {
+    margin: 60px 0 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media (min-width: 1000px) {
+    .btn__box.ab {
+        margin: 40px 0 0;
+        display: block;
+    }
+}
+
+.btn__box.menu {
+    margin: 20px auto 0;
+}
+
+@media (min-width: 1000px) {
+    .btn__box.menu {
+        margin: 55px 0 0;
+    }
+}
+
+.btn__box.coupon {
+    margin: 20px auto 0;
+    display: flex;
+    justify-content: center;
+}
+
+.btn__box.con {
+    margin: 10px auto 0;
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width: 1000px) {
+    .btn__box.con {
+        margin: 20px auto 0;
+    }
+}
+
+.btn__box .btn__box-link {
+    display: inline-block;
+    padding-left: 20px;
+    white-space: nowrap;
+    position: relative;
+    transition: 0.3s;
+    margin: 0px auto 0;
+    padding: 0;
+    width: 320px;
+    height: 56px;
+}
+
+.btn__box .btn__box-link.bg__black-link {
+    position: relative;
+    width: 240px;
+    height: 50px;
+    box-sizing: border-box;
+    padding: 0;
+    cursor: pointer;
+    @include m.flex(center, center);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    background: v.$accent-color;
+    border: 2px solid v.$accent-color;
+    color: v.$white-color;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: v.$text-font;
+}
+
+.btn__box .btn__box-link.bg__black-link:hover {
+    background: v.$white-color;
+    color: v.$accent-color;
+    border: 2px solid v.$accent-color;
+}
+
+.btn__box .btn__box-link.bg__black-link:hover .btn__box-text {
+    color: v.$white-color;
+    font-weight: 700;
+}
+
+.btn__box .btn__box-text {
+    padding: 13px 0;
+    transition: 0.3s;
+    font-style: normal;
+    font-weight: 700;
+    font-size: v.$font-size-s;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.08em;
+    color: v.$white-color;
+}
+
+@media (min-width: 1000px) {
+    .btn__box .btn__box-text {
+        font-size: 16px;
+    }
+}
+
+.btn__box .btn__box-text:after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    background: v.$white-color;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: scale(1, 1);
+    transform-origin: left top;
+    transition: all 0.3s;
+}
+
+.btn__box .btn__box-text.coupon {
+    font-weight: 300;
+    line-height: 28px;
+    letter-spacing: 0.08em;
+    padding: 0;
+}
+
+.btn__box .btn__box-text.coupon:after {
+    content: none;
+}
+
+.btn__box .btn__box-text.white {
+    font-size: 16px;
+    line-height: 23px;
+    letter-spacing: 0.08em;
+    padding: 0;
+    color: v.$white-color;
+    font-size: v.$font-size-s;
+}
+
+@media (min-width: 1000px) {
+    .btn__box .btn__box-text.white {
+        font-size: 16px;
+    }
+}
+
+.btn__box .btn__box-text.white:after {
+    content: none;
+}
+
+.btn__box #submit[disabled] {
+    background-color: #ccc;
+    border: solid 1px #ccc;
+    cursor: not-allowed;
+    border-radius: 50px;
+    color: v.$white-color;
+}
+
+.btn__box #submit[disabled] .btn__box-text {
+    color: v.$white-color;
+}
+
+
+/* ================= Z-INDEX ================= */
+
+body[dir=rtl] .formError .formErrorArrow,
+body.rtl .formError .formErrorArrow {
+    margin: -2px 13px 0 0;
+}
+
+body .formError {
+    z-index: 990;
+}
+
+body .formError .formErrorContent {
+    z-index: 991;
+}
+
+body .formError .formErrorArrow {
+    z-index: 996;
+}
+
+body .ui-dialog .formError {
+    z-index: 5000;
+}
+
+body .ui-dialog .formError .formErrorContent {
+    z-index: 5001;
+}
+
+body .ui-dialog .formError .formErrorArrow {
+    z-index: 5006;
+}
+
+body .inputContainer {
+    position: relative;
+    float: left;
+}
+
+body .ajaxSubmit {
+    padding: 20px;
+    background: #55ea55;
+    border: 1px solid #999;
+    display: none;
+}
+
+body .greenPopup .formErrorContent {
+    background: #33be40;
+}
+
+body .greenPopup .formErrorArrow div {
+    background: #33be40;
+}
+
+body .blackPopup .formErrorContent {
+    background: #393939;
+    color: #FFF;
+}
+
+body .blackPopup .formErrorArrow div {
+    background: #393939;
+    color: #FFF;
+}
+
+body .formError {
+    position: absolute;
+    top: 300px;
+    left: 300px;
+    display: block;
+    cursor: pointer;
+    text-align: left;
+}
+
+body .formError .formErrorArrow {
+    width: 15px;
+    margin: -2px 0 0 13px;
+    position: relative;
+}
+
+body .formError .formErrorArrow .line10 {
+    width: 13px;
+    border: none;
+}
+
+body .formError .formErrorArrow .line9 {
+    width: 11px;
+    border: none;
+}
+
+body .formError .formErrorArrow .line8 {
+    width: 11px;
+}
+
+body .formError .formErrorArrow .line7 {
+    width: 9px;
+}
+
+body .formError .formErrorArrow .line6 {
+    width: 7px;
+}
+
+body .formError .formErrorArrow .line5 {
+    width: 5px;
+}
+
+body .formError .formErrorArrow .line4 {
+    width: 3px;
+}
+
+body .formError .formErrorArrow .line3 {
+    width: 1px;
+    border-left: 2px solid #ddd;
+    border-right: 2px solid #ddd;
+    border-bottom: 0 solid #ddd;
+}
+
+body .formError .formErrorArrow .line2 {
+    width: 3px;
+    border: none;
+    background: #ddd;
+}
+
+body .formError .formErrorArrow .line1 {
+    width: 1px;
+    border: none;
+    background: #ddd;
+}
+
+body .formError .formErrorContent {
+    width: 100%;
+    background: #ee0101;
+    position: relative;
+    color: #fff;
+    min-width: 120px;
+    font-size: 11px;
+    border: 2px solid #ddd;
+    box-shadow: 0 0 6px #000;
+    -moz-box-shadow: 0 0 6px #000;
+    -webkit-box-shadow: 0 0 6px #000;
+    -o-box-shadow: 0 0 6px #000;
+    padding: 4px 10px 4px 10px;
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+
+body .formError.inline {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: inline-block;
+}
+
+body .formError.inline .formErrorContent {
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    -o-box-shadow: none;
+    border: none;
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    -o-border-radius: 0;
+}
+
+body .formError .formErrorArrowBottom {
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    -o-box-shadow: none;
+    margin: 0px 0 0 12px;
+    top: 2px;
+}
+
+body .formError .formErrorArrow div {
+    border-left: 2px solid #ddd;
+    border-right: 2px solid #ddd;
+    box-shadow: 0 2px 3px #444;
+    -moz-box-shadow: 0 2px 3px #444;
+    -webkit-box-shadow: 0 2px 3px #444;
+    -o-box-shadow: 0 2px 3px #444;
+    font-size: 0px;
+    height: 1px;
+    background: #ee0101;
+    margin: 0 auto;
+    line-height: 0;
+    font-size: 0;
+    display: block;
+}
+
+body .formError .formErrorArrowBottom div {
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    -o-box-shadow: none;
+}

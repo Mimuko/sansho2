@@ -1,0 +1,465 @@
+@use "base/variables" as v;
+@use "base/mixin" as m;
+.decoration {
+    display: none;
+    @include m.mq(xl) {
+        display: block;
+        position: absolute;
+        z-index: -1;
+    }
+}
+
+.pageHeader {
+    margin-block-start: 66px;
+    z-index: 1;
+    @include m.mq(lg) {
+        margin-block-start: 87px;
+    }
+}
+
+
+/*--------------------------------
+	SHOP LAYOUT
+--------------------------------*/
+
+.txtBox {
+    flex: 1;
+}
+
+.shopInfoItem {
+    @include m.flex(flex-start, flex-start);
+    flex-direction: column;
+    row-gap: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #C4C4C4;
+    line-height: 1.8;
+    letter-spacing: 0.05em;
+    font-size: 14px;
+    @include m.mq {
+        text-align: left;
+        flex-direction: row;
+        column-gap: 20px;
+    }
+    &:has(.img) {
+        border: none;
+    }
+    &:not(:last-of-type) {
+        margin-bottom: 8px;
+    }
+}
+
+.shopInfoItemLogo {
+    &>.img {
+        width: 380px;
+        .wakaimon & {
+            width: 201px;
+        }
+        .izumo & {
+            width: 166px;
+        }
+    }
+}
+
+.shopInfoItemHead {
+    max-width: 74px;
+    width: 100%;
+}
+
+.shopSection {
+    position: relative;
+    z-index: 0;
+    & .map,
+    & .googleMap {
+        height: 470px;
+        background: v.$black-color;
+        @include m.mq {
+            flex: 1;
+        }
+        @include m.mq(lg) {
+            max-width: 600px;
+        }
+        & div {
+            width: 100%;
+            height: 100%;
+            & iframe {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    & .flex {
+        @include m.mq {
+            flex-direction: row;
+            column-gap: 30px;
+        }
+        @include m.mq(lg) {
+            column-gap: 60px;
+        }
+        @include m.mq(xl) {
+            column-gap: 80px;
+        }
+    }
+    &.hikawahonten {
+        & .decorationRight {
+            top: 73px;
+            right: 119px;
+        }
+        & .decorationLeft {
+            bottom: 49px;
+            left: 17px;
+        }
+    }
+    &.izumoekimae {
+        & .decorationRight {
+            top: -30px;
+            right: 71px;
+        }
+        & .decorationLeft {
+            bottom: -50px;
+            left: 54px;
+        }
+    }
+    &.wakaimon {
+        & .decorationRight {
+            top: 73px;
+            right: 119px;
+        }
+        & .decorationLeft {
+            bottom: 49px;
+            left: 17px;
+        }
+    }
+    &.izumo {
+        & .decorationRight {
+            top: 15px;
+            right: 76px;
+        }
+        & .decorationLeft {
+            bottom: 12px;
+            left: 71px;
+        }
+    }
+}
+
+
+/*--------------------------------
+	COMMITMENT
+--------------------------------*/
+
+.commitmentSection {
+    counter-reset: ttl;
+    & .flex {
+        @include m.mq(lg) {
+            column-gap: 50px;
+        }
+        &.flex-reverse {
+            margin-top: 50px;
+            @include m.mq(lg) {
+                margin-top: 100px;
+                flex-direction: row-reverse;
+            }
+        }
+    }
+    & .imgBox {
+        flex: 1;
+        @include m.mq(xl) {
+            flex: unset;
+            flex-basis: 681px;
+        }
+        & .img {
+            width: 100%;
+            display: block;
+        }
+    }
+    & .txtBox {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+        flex: 1;
+        @include m.mq(xl) {
+            flex-basis: 340px;
+        }
+    }
+}
+
+.txtBoxHeadTtl {
+    font-size: v.$font-size-m;
+    letter-spacing: 0.02em;
+    line-height: 1.6;
+    &.fzAdjust {
+        font-size: 22px;
+    }
+}
+
+.txBoxHeadBd {
+    margin-top: 8px;
+    position: relative;
+    @include m.flex(center, flex-start);
+    color: v.$accent-color;
+    column-gap: 17px;
+    & .txt {
+        &::after {
+            margin-left: 8px;
+            counter-increment: ttl;
+            content: counter(ttl, decimal-leading-zero);
+        }
+    }
+    &::before {
+        content: "";
+        display: block;
+        width: 80%;
+        height: 1px;
+        background: v.$accent-color;
+    }
+}
+
+
+/*--------------------------------
+    RECOMMEND
+--------------------------------*/
+
+.recommendSection {
+    position: relative;
+    & .decoration {
+        &.decorationRight {
+            top: 280px;
+            right: 0;
+        }
+        &.decorationLeftTop {
+            top: 17px;
+            left: 100px;
+        }
+        &.decorationLeftBottom {
+            bottom: 130px;
+            left: 0;
+        }
+    }
+}
+
+.courseBox {
+    position: relative;
+    z-index: 0;
+    height: 290px;
+    @include m.mq(sm) {
+        height: 340px;
+    }
+    @include m.mq {
+        height: 600px;
+    }
+    @include m.mq(lg) {
+        max-width: 950px;
+        height: 785px;
+        margin: auto;
+    }
+    & .sectionHead {
+        background: v.$white-color;
+        width: fit-content;
+        position: absolute;
+        top: -30px;
+        right: 0;
+        left: 0;
+        margin: auto;
+        padding: 6px 10px;
+        z-index: 1;
+        @include m.mq {
+            padding: 20px 45px;
+        }
+    }
+    & .sectionHeadTtl {
+        font-size: 20px;
+        @include m.mq(lg) {
+            font-size: v.$font-size-m;
+        }
+    }
+}
+
+.courseImg {
+    @include m.flex;
+    margin: auto;
+    width: 45%;
+    height: fit-content;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    @include m.mq(sm) {
+        width: 50%;
+    }
+    @include m.mq(lg) {
+        max-width: 457px;
+        width: 100%;
+    }
+    &>.img {
+        flex: 1;
+    }
+}
+
+.courseImgBg {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    &>.img {
+        width: 100%;
+    }
+}
+
+
+/*--------------------------------
+	STAY
+--------------------------------*/
+
+.staySection {
+    & .imgBoxWrap {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+        @include m.mq(lg) {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 20px;
+        }
+    }
+    & .imgBox {
+        flex: 1;
+        width: 100%;
+        @include m.mq(lg) {
+            max-width: 540px;
+        }
+        &>.img {
+            border: 5px solid v.$white-color;
+            width: 100%;
+            box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+        }
+    }
+}
+
+.priceBox {
+    padding: 10px;
+    background: v.$white-color;
+    position: relative;
+    z-index: 0;
+    margin-bottom: 40px;
+}
+
+.priceBoxInr {
+    padding: 10px;
+    border: 1px solid v.$accent-color;
+    @include m.flex;
+    flex-direction: column;
+}
+
+.priceItem {
+    display: grid;
+    grid-template-columns: 70px 50px 150px;
+    grid-template-rows: auto;
+    column-gap: 15px;
+    font-size: 14px;
+    @include m.mq {
+        grid-template-columns: 70px 237px 180px;
+        column-gap: 30px;
+        font-size: v.$font-size-s;
+    }
+    &::before {
+        content: "";
+        display: block;
+        height: 1px;
+        width: 100%;
+        border-bottom: 1px dashed v.$black-color;
+        grid-column: 2 / 2;
+        grid-row: 1 / 2;
+        place-self: center;
+    }
+}
+
+.priceName {
+    max-width: 70px;
+    width: 100%;
+    text-align: right;
+    grid-column: 1 / 2;
+}
+
+.fee {
+    flex: 1;
+    white-space: nowrap;
+    text-align: left;
+    grid-column: 3 / 4;
+    @include m.mq {
+        column-gap: 30px;
+    }
+}
+
+.priceBoxImg {
+    width: 28px;
+    height: auto;
+    position: absolute;
+    @include m.mq {
+        width: 51px;
+    }
+    &.topLeft {
+        top: 0;
+        left: 0;
+    }
+    &.topRight {
+        top: 0;
+        right: 0;
+    }
+    &.bottomRight {
+        right: 0;
+        bottom: -1px;
+    }
+    &.bottomLeft {
+        left: 0;
+        bottom: -1px;
+    }
+}
+
+
+/*--------------------------------
+	MENU
+--------------------------------*/
+
+.menuItem {
+    @include m.flex(flex-start, space-between);
+    border-bottom: 1px solid #C29115;
+    padding-bottom: 10px;
+    & .txt {
+        text-align: right;
+    }
+}
+
+.menuItemEm {
+    color: #C29115;
+    font-weight: bold;
+}
+
+.menuList {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    width: 100%;
+}
+
+.menuBox {
+    @include m.flex;
+    flex-direction: column;
+    row-gap: 10px;
+    @include m.mq(lg) {
+        flex-direction: row;
+        max-width: 840px;
+        margin: auto;
+        column-gap: 40px;
+    }
+}
+
+.recommendSection {
+    & .txtBox {
+        max-width: 146px;
+    }
+    & .smallTxt {
+        letter-spacing: 0.04em;
+        line-height: 1.5;
+    }
+}
