@@ -1,0 +1,213 @@
+---
+import '../styles/base/_mixin.scss';
+import '../styles/base/_reset.scss';
+import '../styles/base/_variables.scss';
+import '../styles/header.scss';
+import '../styles/footer.scss';
+import '../styles/common.scss';
+import '../styles/shopCommon.scss';
+
+import Header from '../components/header.astro';
+import Footer from '../components/footer.astro';
+import Head from '../components/head.astro';
+
+
+const pageTitle = "居酒屋 和皆門｜華満グループ";
+const siteDomein = "https://hanaman-group.com/system_panel/uploads/images/";
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<Head />
+	<title>{pageTitle}</title>
+</head>
+
+<body class="wrap">
+	<Header />
+    <main class="content">
+        <section class="pageHeader">
+            <div class="pageHeaderBg">
+                <img width="1440" height="410" src={siteDomein + '20240728152411764040.png'} alt="居酒屋 和皆門" class="pageHeaderImg">
+            </div>
+            <div class="pageHeaderGroup">
+                <h1 class="pageHeaderFront">
+                    <img width="294" height="152" src={siteDomein + '20240725232908182468.png'} alt="居酒屋 和皆門">
+                </h1>
+            </div>
+        </section>
+        <section class="section shopSection wakaimon">
+            <div class="sectionInr">
+                <div class="flex">
+                    <div class="googleMap">
+                        <p>グーグルマップ</p>
+                    </div>
+                    <div class="txtBox">
+                        <div class="shopInfoItem shopInfoItemLogo">
+                            <img src={siteDomein + '20240728152411752848.png'} alt="居酒屋和皆門 ロゴ画像" width="201" height="86" class="img">
+                        </div>
+                        <div class="shopInfoItem">
+                            <p class="txt shopInfoItemHead">住所</p>
+                            <p class="txt">出雲市斐川町上直江1285-1</p>
+                        </div>
+                        <div class="shopInfoItem">
+                            <p class="txt shopInfoItemHead">駐車場</p>
+                            <p class="txt">70台</p>
+                        </div>
+                        <div class="shopInfoItem">
+                            <p class="txt shopInfoItemHead">TEL</p>
+                            <a href="tel:0853725888" class="link">
+                                <p class="txt">0853-72-5888</p>
+                            </a>
+                        </div>
+                        <div class="shopInfoItem">
+                            <p class="txt shopInfoItemHead">営業時間</p>
+                            <p class="txt">17:00 ~ 22:00 LO 21:30）<br>
+                            金曜日土曜日 17:00~23:00(LO 22:00)</p>
+                        </div>
+                        <div class="shopInfoItem">
+                            <p class="txt shopInfoItemHead">定休日</p>
+                            <p class="txt">無休（年末年始を除く）</p>
+                        </div>
+                        <div class="shopInfoItem">
+                            <p class="txt shopInfoItemHead">個室</p>
+                            <p class="txt">9室</p>
+                        </div>
+                        <div class="shopInfoItem">
+                            <p class="txt shopInfoItemHead">カウンター</p>
+                            <p class="txt">6席</p>
+                        </div>
+                        <div class="shopInfoItem">
+                            <p class="txt shopInfoItemHead">テーブル</p>
+                            <p class="txt">6組</p>
+                        </div>
+                        <div class="shopInfoItem">
+                            <p class="txt shopInfoItemHead">収容人数</p>
+                            <p class="txt">宴会最大30名</p>
+                        </div>
+                        <div class="shopInfoItem">
+                            <p class="txt shopInfoItemHead">支払い方法</p>
+                            <p class="txt lsAdjust">現金、電子マネー、クレジットカード</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="decoration decorationRight">
+                <img src={siteDomein + '20240728143853688099.png'} alt="装飾用の画像" width="130" height="71">
+            </div>
+            <div class="decoration decorationLeft">
+                <img src={siteDomein + '20240728143853986717.png'} alt="装飾用の画像" width="152" height="83">
+            </div>
+        </section>
+        <section class="section sectionBg commitmentSection">
+            <div class="sectionBgImg">
+                <img src={siteDomein + '20240728152411662861.png'} alt="背景用の画像" width="1440" height="1247" class="img" />
+            </div>
+            <div class="sectionInr">
+                <div class="sectionHead">
+                    <h2 class="sectionHeadTtl">居酒屋 和皆門のこだわり</h2>
+                    <p class="sectionHeadDesc">commitment</p>
+                </div>
+                <div class="flex">
+                    <div class="txtBox">
+                        <div class="txtBoxHead">
+                            <h3 class="txtBoxHeadTtl">選びきれない美味しさ！<br>200種のメニューをご提供</h3>
+                            <div class="txBoxHeadBd">
+                                <p class="txt">commitment</p>
+                            </div>
+                        </div>
+                        <div class="txtBoxBody">
+                            <p class="txt">
+                                選びきれない美味しさ！居酒屋 和皆門では、豊富なジャンルの料理を取り揃えた約200種のメニューを提供しております。<br>
+                                新鮮な魚介料理から肉料理、地元の特産品を活かした逸品まで、幅広い選択肢がございます。<br>
+                                各メニューは、素材の持ち味を最大限に引き出す調理法でご提供し、どなたにもご満足いただける味わいです。<br>
+                                特別なひとときや大切な集まりに、ぜひ当店の豊富なメニューで贅沢な時間をお楽しみください。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="imgBox">
+                        <img src={siteDomein + '20240728152411182825.png'} alt="提供しているお料理のイメージ画像" width="681" height="389" class="img">
+                    </div>
+                </div>
+                <div class="flex flex-reverse">
+                    <div class="txtBox">
+                        <div class="txtBoxHead">
+                            <h3 class="txtBoxHeadTtl">大人数でも安心、<br>個室ありの居酒屋</h3>
+                            <div class="txBoxHeadBd">
+                                <p class="txt">commitment</p>
+                            </div>
+                        </div>
+                        <div class="txtBoxBody">
+                            <p class="txt">
+                                大人数でも安心してご利用いただける、個室完備の居酒屋です。<br>
+                                居酒屋 和皆門では、プライベートな空間でゆったりとした時間を過ごしていただけるよう、様々なサイズの個室を用意しております。<br>
+                                <br>
+                                ビジネスの接待や友人同士の集まり、ご家族での特別なひとときなど、どんなシーンにも対応可能です。<br>
+                                豊富なメニューと心温まるおもてなしで、皆様のご来店をお待ちしております。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="imgBox">
+                        <img src={siteDomein + '20240728152411913786.png'} alt="個室の内装画像" width="681" height="389" class="img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section recommendSection sectionBg">
+            <div class="sectionBgImg">
+                <img src={siteDomein + '20240728152411686412.png'} alt="背景用の画像" width="1440" height="1247" class="img" />
+            </div>
+            <div class="sectionInr">
+                <div class="sectionHead">
+                    <h2 class="sectionHeadTtl">居酒屋 和皆門の<br class="pcHidden">オススメメニュー</h2>
+                    <p class="sectionHeadDesc">recommend menu</p>
+                </div>
+                <div class="menuBox">
+                    <div class="menuList">
+                        <div class="menuItem">
+                            <p class="txt">ささみ梅肉串</p>
+                            <p class="txt">140円</p>
+                        </div>
+                        <div class="menuItem">
+                            <p class="txt">もずく酢</p>
+                            <p class="txt">350円</p>
+                        </div>
+                        <div class="menuItem">
+                            <p class="txt">和皆門の特大茶碗蒸し</p>
+                            <p class="txt">440円</p>
+                        </div>
+                        <div class="menuItem">
+                            <p class="txt">和皆門焼</p>
+                            <p class="txt">580円</p>
+                        </div>
+                    </div>
+                    <div class="menuList">
+                        <div class="menuItem">
+                            <p class="txt">大田産　カサゴ 煮付</p>
+                            <p class="txt">850円</p>
+                        </div>
+                        <div class="menuItem">
+                            <p class="txt">畑ピザ</p>
+                            <p class="txt">890円</p>
+                        </div>
+                        <div class="menuItem">
+                            <p class="txt">海ピザ</p>
+                            <p class="txt">890円</p>
+                        </div>
+                        <div class="menuItem">
+                            <p class="txt">やきとりセット(8本)</p>
+                            <p class="txt">1,100円</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+	<Footer />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+
+</html>

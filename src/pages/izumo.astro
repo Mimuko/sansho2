@@ -1,0 +1,226 @@
+---
+import '../styles/base/_mixin.scss';
+import '../styles/base/_reset.scss';
+import '../styles/base/_variables.scss';
+import '../styles/header.scss';
+import '../styles/footer.scss';
+import '../styles/common.scss';
+import '../styles/shopCommon.scss';
+
+import Header from '../components/header.astro';
+import Footer from '../components/footer.astro';
+import Head from '../components/head.astro';
+
+
+const pageTitle = "居酒屋いずも｜華満グループ";
+const siteDomein = "https://hanaman-group.com/system_panel/uploads/images/";
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<Head />
+	<title>{pageTitle}</title>
+</head>
+
+<body class="wrap">
+	<Header />
+    <main class="content">
+        <section class="pageHeader">
+            <div class="pageHeaderBg">
+                <img width="1440" height="410" src={siteDomein + '20240728164719468573.png'} alt="居酒屋 いずも" class="pageHeaderImg">
+            </div>
+            <div class="pageHeaderGroup">
+                <h1 class="pageHeaderFront">
+                    <img width="300" height="169" src={siteDomein + '20240725232908732856.png'} alt="居酒屋 いずも">
+                </h1>
+            </div>
+        </section>
+        <section class="section shopSection izumo">
+            <div class="sectionInr">
+                <div class="flex">
+                    <div class="googleMap">
+                        <p>グーグルマップ</p>
+                    </div>
+                    <div class="txtBox">
+                        <div class="shopInfoItem shopInfoItemLogo">
+                            <img src={siteDomein + '20240728164719282740.png'} alt="居酒屋いずも ロゴ画像" width="166" height="94" class="img">
+                        </div>
+                        <div class="shopInfoItem">
+                            <p class="txt shopInfoItemHead">住所</p>
+                            <p class="txt">出雲市今市町930-3</p>
+                        </div>
+                        <div class="shopInfoItem">
+                            <p class="txt shopInfoItemHead">TEL</p>
+                            <a href="tel:0853247372" class="link">
+                                <p class="txt">0853-24-7372</p>
+                            </a>
+                        </div>
+                        <div class="shopInfoItem">
+                            <p class="txt shopInfoItemHead">営業時間</p>
+                            <p class="txt">17:00~23:00(LO 22:00)</p>
+                        </div>
+                        <div class="shopInfoItem">
+                            <p class="txt shopInfoItemHead">定休日</p>
+                            <p class="txt">火曜（年末年始を除く）</p>
+                        </div>
+                        <div class="shopInfoItem">
+                            <p class="txt shopInfoItemHead">個室</p>
+                            <p class="txt">10室</p>
+                        </div>
+                        <div class="shopInfoItem">
+                            <p class="txt shopInfoItemHead">カウンター</p>
+                            <p class="txt">9席</p>
+                        </div>
+                        <div class="shopInfoItem">
+                            <p class="txt shopInfoItemHead">座敷</p>
+                            <p class="txt">2室</p>
+                        </div>
+                        <div class="shopInfoItem">
+                            <p class="txt shopInfoItemHead">収容人数</p>
+                            <p class="txt">宴会、最大20名</p>
+                        </div>
+                        <div class="shopInfoItem">
+                            <p class="txt shopInfoItemHead">支払い方法</p>
+                            <p class="txt lsAdjust">現金、電子マネー、クレジットカード</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="decoration decorationRight">
+                <img src={siteDomein + '20240728164719387480.png'} alt="装飾用の画像" width="196" height="185">
+            </div>
+            <div class="decoration decorationLeft">
+                <img src={siteDomein + '20240728164719674464.png'} alt="装飾用の画像" width="99" height="99">
+            </div>
+        </section>
+        <section class="section sectionBg commitmentSection">
+            <div class="sectionBgImg">
+                <img src={siteDomein + '20240728164719137577.png'} alt="背景用の画像" width="1440" height="1247" class="img" />
+            </div>
+            <div class="sectionInr">
+                <div class="sectionHead">
+                    <h2 class="sectionHeadTtl">居酒屋 いずものこだわり</h2>
+                    <p class="sectionHeadDesc">commitment</p>
+                </div>
+                <div class="flex">
+                    <div class="txtBox">
+                        <div class="txtBoxHead">
+                            <h3 class="txtBoxHeadTtl">
+                                山陰産の逸品を堪能！<br>
+                                のどぐろ、甘鯛、松葉かになど<br>
+                                多数の料理
+                            </h3>
+                            <div class="txBoxHeadBd">
+                                <p class="txt">commitment</p>
+                            </div>
+                        </div>
+                        <div class="txtBoxBody">
+                            <p class="txt">
+                                山陰産の逸品を堪能！当店では、のどぐろ、甘鯛、松葉かにをはじめとする多数の料理を用意しております。<br>
+                                新鮮な魚介類や地元の特産品を使用した料理は、どれも風味豊かで絶品です。<br>
+                                料理の一つ一つに山陰の自然の恵みを感じていただけることでしょう。<br>
+                                また、厳選された地元食材を使った料理と共に、心温まるおもてなしを提供し、お客様に特別なひとときをお過ごしいただけるよう努めております。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="imgBox">
+                        <img src={siteDomein + '20240728164719112934.png'} alt="提供しているお料理のイメージ画像" width="681" height="389" class="img">
+                    </div>
+                </div>
+                <div class="flex flex-reverse">
+                    <div class="txtBox">
+                        <div class="txtBoxHead">
+                            <h3 class="txtBoxHeadTtl">島根の地酒も<br>多彩にラインアップ！</h3>
+                            <div class="txBoxHeadBd">
+                                <p class="txt">commitment</p>
+                            </div>
+                        </div>
+                        <div class="txtBoxBody">
+                            <p class="txt">
+                                島根の地酒も多彩にラインアップ！居酒屋 いずもでは、厳選された島根の地酒を豊富に取り揃えております。<br>
+                                地元で醸造されたこだわりの地酒は、食事との相性も抜群で、のどぐろ、甘鯛、松葉かになどの山陰産の逸品とともにお楽しみいただけます。<br>
+                                風味豊かな地酒の数々は、食材の味を一層引き立て、特別なひとときを演出します。<br>
+                                お酒好きのお客様にもご満足いただけるよう、様々な銘柄を揃えました。<br>
+                                ぜひ、店内のメニューにて確認していただき、楽しいひと時をお過ごしください。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="imgBox">
+                        <img src={siteDomein + '20240728164719514719.png'} alt="店内のイメージ画像" width="681" height="389" class="img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section recommendSection sectionBg">
+            <div class="sectionBgImg">
+                <img src={siteDomein + '20240728152411686412.png'} alt="背景用の画像" width="1440" height="1247" class="img" />
+            </div>
+            <div class="sectionInr">
+                <div class="sectionHead">
+                    <h2 class="sectionHeadTtl">居酒屋 いずもの<br class="pcHidden">オススメメニュー</h2>
+                    <p class="sectionHeadDesc">recommend menu</p>
+                </div>
+                <div class="menuBox">
+                    <div class="menuList">
+                        <div class="menuItem">
+                            <p class="txt">しまね和牛コロッケ</p>
+                            <p class="txt">350円</p>
+                        </div>
+                        <div class="menuItem">
+                            <p class="txt">亀の手</p>
+                            <p class="txt">480円</p>
+                        </div>
+                        <div class="menuItem">
+                            <p class="txt">カンパチ　かぶと煮</p>
+                            <p class="txt">650円</p>
+                        </div>
+                        <div class="menuItem">
+                            <p class="txt">アナゴ天ぷら</p>
+                            <p class="txt">660円</p>
+                        </div>
+                        <div class="menuItem menuItemEm">
+                            <p class="txt">出雲そば</p>
+                            <p class="txt">680円</p>
+                        </div>
+                        <div class="menuItem">
+                            <p class="txt">大田産 甘鯛 塩焼き</p>
+                            <p class="txt">1,500円</p>
+                        </div>
+                    </div>
+                    <div class="menuList">
+                        <div class="menuItem">
+                            <p class="txt">のどぐろジェノベーゼ</p>
+                            <p class="txt">2,000円</p>
+                        </div>
+                        <div class="menuItem">
+                            <p class="txt">日本海のイカと松葉ガニ</p>
+                            <p class="txt">2,000円</p>
+                        </div>
+                        <div class="menuItem">
+                            <p class="txt">のどぐろの煮つけ</p>
+                            <div class="txtBox">
+                                <p class="txt">2,000円～</p>
+                                <p class="smallTxt">（その日の仕入れ状況により変動します）</p>
+                            </div>
+                        </div>
+                        <div class="menuItem">
+                            <p class="txt">のどぐろの塩焼き</p>
+                            <div class="txtBox">
+                                <p class="txt">2,000円～</p>
+                                <p class="smallTxt">（その日の仕入れ状況により変動します）</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+	<Footer />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+
+</html>

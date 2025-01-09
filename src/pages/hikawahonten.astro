@@ -1,0 +1,240 @@
+---
+import '../styles/base/_mixin.scss';
+import '../styles/base/_reset.scss';
+import '../styles/base/_variables.scss';
+import '../styles/header.scss';
+import '../styles/footer.scss';
+import '../styles/common.scss';
+import '../styles/shopCommon.scss';
+
+import Header from '../components/header.astro';
+import Footer from '../components/footer.astro';
+import Head from '../components/head.astro';
+
+
+const pageTitle = "華満斐川本店｜華満グループ";
+const siteDomein = "https://hanaman-group.com/system_panel/uploads/images/";
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<Head />
+	<title>{pageTitle}</title>
+</head>
+
+<body class="wrap">
+	<Header />
+    <main class="content">
+        <div class="pageHeader">
+            <div class="pageHeaderBg">
+                <img width="1440" height="410" src={siteDomein + '20240806104613312728.png'} alt="華満 斐川本店・ホテル華満" class="pageHeaderImg">
+            </div>
+            <div class="pageHeaderGroup">
+                <h1 class="pageHeaderFront">
+                    <img width="200" height="138" src={siteDomein + '20240806104613725596.png'} alt="華満 斐川本店・ホテル華満" class="">
+                </h1>
+            </div>
+        </div>
+        <div class="section shopSection hikawahonten">
+            <div class="sectionInr">
+                <div class="flex">
+                    <div class="googleMap">
+                        <p>グーグルマップ</p>
+                    </div>
+                    <div class="txtBox">
+                        <div class="shopInfoItem shopInfoItemLogo">
+                            <img src={siteDomein + '20240806104613176769.png'} alt="華満 斐川本店・ホテル華満 ロゴ画像" width="300" height="72" class="img">
+                        </div>
+                        <div class="shopInfoItem">
+                            <p class="txt shopInfoItemHead">住所</p>
+                            <p class="txt">出雲市斐川町上直江1285-1</p>
+                        </div>
+                        <div class="shopInfoItem">
+                            <p class="txt shopInfoItemHead">駐車場</p>
+                            <p class="txt">70台</p>
+                        </div>
+                        <div class="shopInfoItem">
+                            <p class="txt shopInfoItemHead">TEL</p>
+                            <a href="tel:0853725800" class="link">
+                                <p class="txt">0853-72-5800</p>
+                            </a>
+                        </div>
+                        <div class="shopInfoItem">
+                            <p class="txt shopInfoItemHead">営業時間</p>
+                            <p class="txt">昼　11:00～14:00<br>夜　17:00～21:30</p>
+                        </div>
+                        <div class="shopInfoItem">
+                            <p class="txt shopInfoItemHead">定休日</p>
+                            <p class="txt">火曜（年末年始を除く）</p>
+                        </div>
+                        <div class="shopInfoItem">
+                            <p class="txt shopInfoItemHead">座敷</p>
+                            <p class="txt">9室</p>
+                        </div>
+                        <div class="shopInfoItem">
+                            <p class="txt shopInfoItemHead">収容人数</p>
+                            <p class="txt">少人数～団体様<br>最大収容人数120名</p>
+                        </div>
+                        <div class="shopInfoItem">
+                            <p class="txt shopInfoItemHead">支払い方法</p>
+                            <p class="txt lsAdjust">現金またはクレジットカード</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="decoration decorationRight">
+                <img src={siteDomein + '20240728143853688099.png'} alt="装飾用の画像" width="130" height="71">
+            </div>
+            <div class="decoration decorationLeft">
+                <img src={siteDomein + '20240728143853986717.png'} alt="装飾用の画像" width="152" height="83">
+            </div>
+        </div>
+        <div class="section sectionBg commitmentSection">
+            <div class="sectionBgImg">
+                <img src={siteDomein + '20240727122347406783.png'} alt="背景用の画像" width="1440" height="1247" class="img" />
+            </div>
+            <div class="sectionInr">
+                <div class="sectionHead">
+                    <h2 class="sectionHeadTtl">華満斐川本店のこだわり</h2>
+                    <p class="sectionHeadDesc">commitment</p>
+                </div>
+                <div class="flex">
+                    <div class="txtBox">
+                        <div class="txtBoxHead">
+                            <h3 class="txtBoxHeadTtl">特別な法事や祝宴のための<br>最高のおもてなし</h3>
+                            <div class="txBoxHeadBd">
+                                <p class="txt">commitment</p>
+                            </div>
+                        </div>
+                        <div class="txtBoxBody">
+                            <p class="txt">
+                                特別な法事や祝宴のために、華満斐川本店のお店では最高のおもてなしをご提供いたします。<br>
+                                伝統的な和の味わいを大切にしながら、心を込めた料理をお楽しみいただけます。<br>
+                                お客様一人ひとりの大切な時間をより特別なものにするため、スタッフ一同、真心を込めてお迎えいたします。<br>
+                                <br>
+                                ご予算に合わせた宴会・法要プランを提供しておりますのでお気軽にお問い合わせください。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="imgBox">
+                        <img src={siteDomein + '20240727122347187000.png'} alt="提供しているお料理のイメージ画像" width="681" height="389" class="img">
+                    </div>
+                </div>
+                <div class="flex flex-reverse">
+                    <div class="txtBox">
+                        <div class="txtBoxHead">
+                            <h3 class="txtBoxHeadTtl fzAdjust">無料送迎バスサービスで<br>大人数の法事や祝宴もスムーズに</h3>
+                            <div class="txBoxHeadBd">
+                                <p class="txt">commitment</p>
+                            </div>
+                        </div>
+                        <div class="txtBoxBody">
+                            <p class="txt">
+                                無料送迎バスサービスを利用して、大人数の法事や祝宴もスムーズに行えます。<br>
+                                華満斐川本店では、お客様の利便性を第一に考え、無料の送迎バスを提供しております。<br>
+                                大人数でのご利用や遠方からのお客様でも、安心してご来店いただけるよう、事前にご予約いただければ、ご指定の場所までお迎えにあがります。<br>
+                                法事や祝宴などの特別な日を快適にお過ごしいただけるよう、細やかなサービスを心掛けております。<br>
+                                お気軽にお問い合わせください。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="imgBox">
+                        <img src={siteDomein + '20240727122347688350.png'} alt="華満斐川本店の外観写真" width="681" height="389" class="img">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section recommendSection">
+            <div class="sectionInr">
+                <div class="courseBox">
+                    <div class="sectionHead">
+                        <h2 class="sectionHeadTtl">華満斐川本店のオススメコース</h2>
+                        <p class="sectionHeadDesc">recommend course</p>
+                    </div>
+                    <div class="courseImg">
+                        <img src={siteDomein + '20240727122347210197.png'} alt="華満斐川本店のオススメコースの画像" width="457" height="648" class="img">
+                    </div>
+                    <div class="courseImgBg">
+                        <img src={siteDomein + '20240727122347106009.png'} alt="背景用の画像" width="811" height="977" class="img">
+                    </div>
+                </div>
+            </div>
+            <div class="decoration decorationRight">
+                <img src={siteDomein + '20240727122347468250.png'} alt="装飾用の画像" width="237" height="134">
+            </div>
+            <div class="decoration decorationLeftTop">
+                <img src={siteDomein + '20240727122347418725.png'} alt="装飾用の画像" width="152" height="86">
+            </div>
+            <div class="decoration decorationLeftBottom">
+                <img src={siteDomein + '20240727122347783847.png'} alt="装飾用の画像" width="244" height="138">
+            </div>
+        </div>
+
+        <div class="section staySection sectionBg">
+            <div class="sectionBgImg">
+                <img src={siteDomein + '20240727122347221568.png'} alt="背景用の画像" width="1440" height="769" class="img" />
+            </div>
+
+            <div class="sectionInr" id="stay">
+                <div class="sectionHead">
+                    <h2 class="sectionHeadTtl">宿泊について</h2>
+                    <p class="sectionHeadDesc">about accommodation</p>
+                </div>
+                <div class="priceBox">
+                    <div class="priceBoxInr">
+                        <div class="priceItem">
+                            <div class="priceName">
+                                <p>シングル</p>
+                            </div>
+                            <div class="fee">
+                                <p>12室（5,000円/1泊）</p>
+                            </div>
+                        </div>
+                        <div class="priceItem">
+                            <div class="priceName">
+                                <p>ツイン</p>
+                            </div>
+                            <div class="fee">
+                                <p>2室（10,000円/1泊）</p>
+                            </div>
+                        </div>
+                        <div class="priceItem">
+                            <div class="priceName">
+                                <p>駐車場</p>
+                            </div>
+                            <div class="fee">
+                                <p>無料</p>
+                            </div>
+                        </div>
+                    </div>
+                    <img src={siteDomein + '20240727122347904750.png'} alt="装飾用の画像" class="priceBoxImg topLeft">
+                    <img src={siteDomein + '20240727122347947337.png'} alt="装飾用の画像" class="priceBoxImg topRight">
+                    <img src={siteDomein + '20240727122347116553.png'} alt="装飾用の画像" class="priceBoxImg bottomRight">
+                    <img src={siteDomein + '20240727122347738709.png'} alt="装飾用の画像" class="priceBoxImg bottomLeft">
+                </div>
+                <div class="imgBoxWrap">
+                    <div class="imgBox">
+                        <img src={siteDomein + '20240806104613607831.png'} alt="宿泊施設の室内イメージ画像" class="img" width="540" height="303">
+                    </div>
+                    <div class="imgBox">
+                        <img src={siteDomein + '20240806104613628345.png'} alt="宿泊施設の室内イメージ画像" class="img" width="540" height="303">
+                    </div>
+                    <div class="imgBox">
+                        <img src={siteDomein + '20240806104613670410.png'} alt="宿泊施設の室内イメージ画像" class="img" width="540" height="303">
+                    </div>
+                    <div class="imgBox">
+                        <img src={siteDomein + '20240806104613135687.png'} alt="宿泊施設の室内イメージ画像" class="img" width="540" height="303">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+	<Footer />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+
+</html>

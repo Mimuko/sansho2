@@ -1,0 +1,195 @@
+---
+import '../styles/base/_mixin.scss';
+import '../styles/base/_reset.scss';
+import '../styles/base/_variables.scss';
+import '../styles/header.scss';
+import '../styles/footer.scss';
+import '../styles/common.scss';
+import '../styles/shopCommon.scss';
+
+import Header from '../components/header.astro';
+import Footer from '../components/footer.astro';
+import Head from '../components/head.astro';
+
+
+const pageTitle = "華満出雲駅前店｜華満グループ";
+const siteDomein = "https://hanaman-group.com/system_panel/uploads/images/";
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<Head />
+	<title>{pageTitle}</title>
+</head>
+
+<body class="wrap">
+	<Header />
+    <main class="content">
+        <section class="pageHeader">
+            <div class="pageHeaderBg">
+                <img width="1440" height="410" src={siteDomein + '20240728145103325460.png'} alt="出雲駅前店" class="pageHeaderImg">
+            </div>
+            <div class="pageHeaderGroup">
+                <h1 class="pageHeaderFront">
+                    <img width="200" height="138" src={siteDomein + '20240725232921858046.png'} alt="華満 出雲駅前店">
+                </h1>
+            </div>
+        </section>
+        <section class="section shopSection izumoekimae">
+            <div class="sectionInr">
+                <div class="flex">
+                    <div class="googleMap">
+                        <p>グーグルマップ</p>
+                    </div>
+                    <div class="txtBox">
+                        <div class="shopInfoItem shopInfoItemLogo">
+                            <img src={siteDomein + '20240728145312623379.png'} alt="華満出雲駅前店 ロゴ画像" width="300" height="72" class="img">
+                        </div>
+                        <div class="shopInfoItem">
+                            <p class="txt shopInfoItemHead">住所</p>
+                            <p class="txt">出雲市今市町928-13</p>
+                        </div>
+                        <div class="shopInfoItem">
+                            <p class="txt shopInfoItemHead">駐車場</p>
+                            <p class="txt">7台</p>
+                        </div>
+                        <div class="shopInfoItem">
+                            <p class="txt shopInfoItemHead">TEL</p>
+                            <a href="tel:0853213913" class="link">
+                                <p class="txt">0853-21-3913</p>
+                            </a>
+                        </div>
+                        <div class="shopInfoItem">
+                            <p class="txt shopInfoItemHead">営業時間</p>
+                            <p class="txt">17:00～22：00（LO 21:30）</p>
+                        </div>
+                        <div class="shopInfoItem">
+                            <p class="txt shopInfoItemHead">定休日</p>
+                            <p class="txt">月曜日</p>
+                        </div>
+                        <div class="shopInfoItem">
+                            <p class="txt shopInfoItemHead">個室</p>
+                            <p class="txt">6室（1F3室・2F3室）</p>
+                        </div>
+                        <div class="shopInfoItem">
+                            <p class="txt shopInfoItemHead">座敷</p>
+                            <p class="txt">9室</p>
+                        </div>
+                        <div class="shopInfoItem">
+                            <p class="txt shopInfoItemHead">カウンター</p>
+                            <p class="txt">4席</p>
+                        </div>
+                        <div class="shopInfoItem">
+                            <p class="txt shopInfoItemHead">テーブル</p>
+                            <p class="txt">5組20名</p>
+                        </div>
+                        <div class="shopInfoItem">
+                            <p class="txt shopInfoItemHead">大広間</p>
+                            <p class="txt">1室</p>
+                        </div>
+                        <div class="shopInfoItem">
+                            <p class="txt shopInfoItemHead">収容人数</p>
+                            <p class="txt">少人数～団体様<br>最大収容人数100名<br>宴会最大60名</p>
+                        </div>
+                        <div class="shopInfoItem">
+                            <p class="txt shopInfoItemHead">支払い方法</p>
+                            <p class="txt lsAdjust">現金またはクレジットカード</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="decoration decorationRight">
+                <img src={siteDomein + '20240728145103326277.png'} alt="装飾用の画像" width="199" height="190">
+            </div>
+            <div class="decoration decorationLeft">
+                <img src={siteDomein + '20240728145103733627.png'} alt="装飾用の画像" width="201" height="170">
+            </div>
+        </section>
+        <section class="section sectionBg commitmentSection">
+            <div class="sectionBgImg">
+                <img src={siteDomein + '20240728145103232728.png'} alt="背景用の画像" width="1440" height="1247" class="img" />
+            </div>
+            <div class="sectionInr">
+                <div class="sectionHead">
+                    <h2 class="sectionHeadTtl">華満出雲駅前店のこだわり</h2>
+                    <p class="sectionHeadDesc">commitment</p>
+                </div>
+                <div class="flex">
+                    <div class="txtBox">
+                        <div class="txtBoxHead">
+                            <h3 class="txtBoxHeadTtl">山陰の恵みを味わう、<br>贅沢なひととき</h3>
+                            <div class="txBoxHeadBd">
+                                <p class="txt">commitment</p>
+                            </div>
+                        </div>
+                        <div class="txtBoxBody">
+                            <p class="txt">
+                                山陰の恵みを存分に味わう贅沢なひとときをご提供いたします。<br>
+                                華満出雲駅前店では、新鮮な魚介、しまね和牛、そしてこだわりの蕎麦など、地元の食材をふんだんに使用し、風味豊かな料理をお楽しみいただけます。<br>
+                                <br>
+                                四季折々の山陰の食材を使ったメニューは、素材の持つ本来の味わいを最大限に引き出す調理法でご提供いたします。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="imgBox">
+                        <img src={siteDomein + '20240728145103101921.png'} alt="提供しているお料理のイメージ画像" width="681" height="389" class="img">
+                    </div>
+                </div>
+                <div class="flex flex-reverse">
+                    <div class="txtBox">
+                        <div class="txtBoxHead">
+                            <h3 class="txtBoxHeadTtl">ご予算に合わせた最大60名の<br>宴会・法要プランをご提供</h3>
+                            <div class="txBoxHeadBd">
+                                <p class="txt">commitment</p>
+                            </div>
+                        </div>
+                        <div class="txtBoxBody">
+                            <p class="txt">
+                                華満出雲駅前店では、ご予算に合わせた宴会・法要プランを提供しております。<br>
+                                お客様のご要望に応じた柔軟な対応を心がけており、豪華なコースからシンプルなメニューまで、多彩な選択肢を用意しています。<br>
+                                新鮮な魚介、しまね和牛、地元の食材を活かした料理で、特別なひとときを演出いたします。<br>
+                                また、広々とした宴会場で大人数のお客様にも快適にお過ごしいただけるよう、きめ細やかなサービスを提供しております。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="imgBox">
+                        <img src={siteDomein + '20240728145103392662.png'} alt="宴会場の内装画像" width="681" height="389" class="img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section recommendSection">
+            <div class="sectionInr">
+                <div class="courseBox">
+                    <div class="sectionHead">
+                        <h2 class="sectionHeadTtl">華満出雲駅前店のオススメコース</h2>
+                        <p class="sectionHeadDesc">recommend course</p>
+                    </div>
+                    <div class="courseImg">
+                        <img src={siteDomein + '20240728145103621745.png'} alt="華満出雲駅前店のオススメコースの画像" width="457" height="648" class="img">
+                    </div>
+                    <div class="courseImgBg">
+                        <img src={siteDomein + '20240727122347106009.png'} alt="背景用の画像" width="811" height="977" class="img">
+                    </div>
+                </div>
+            </div>
+            <div class="decoration decorationRight">
+                <img src={siteDomein + '20240727122347468250.png'} alt="装飾用の画像" width="237" height="134">
+            </div>
+            <div class="decoration decorationLeftTop">
+                <img src={siteDomein + '20240727122347418725.png'} alt="装飾用の画像" width="152" height="86">
+            </div>
+            <div class="decoration decorationLeftBottom">
+                <img src={siteDomein + '20240727122347783847.png'} alt="装飾用の画像" width="244" height="138">
+            </div>
+        </section>
+    </main>
+	<Footer />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+
+</html>

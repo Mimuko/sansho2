@@ -1,0 +1,170 @@
+---
+import '../styles/base/_mixin.scss';
+import '../styles/base/_reset.scss';
+import '../styles/base/_variables.scss';
+import '../styles/header.scss';
+import '../styles/footer.scss';
+import '../styles/common.scss';
+import '../styles/company.scss';
+
+import Header from '../components/header.astro';
+import Footer from '../components/footer.astro';
+import Head from '../components/head.astro';
+
+
+const pageTitle = "会社概要｜華満グループ";
+const siteDomein = "https://hanaman-group.com/system_panel/uploads/images/";
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<Head />
+	<title>{pageTitle}</title>
+</head>
+
+<body class="wrap">
+	<Header />
+    <main class="content">
+        <div class="pageHeader">
+            <div class="pageHeaderBg">
+                <img width="1440" height="410" src={siteDomein + '20240729165306337297.png'} alt="会社概要" class="pageHeaderImg" width="1440" height="450" />
+            </div>
+            <div class="pageHeaderGroup">
+                <h1 class="pageHeaderFront">会社概要</h1>
+                <p class="pageHeaderDesc">company</p>
+            </div>
+        </div>
+        <div class="section greetingSection sectionBg">
+            <div class="sectionBgImg">
+                <img src={siteDomein + '20240727122347221568.png'} alt="背景用の画像" class="img" width="1440" height="793">
+            </div>
+            <div class="sectionInr">
+                <div class="sectionHead">
+                    <h2 class="sectionHeadTtl">代表挨拶</h2>
+                    <p class="sectionHeadDesc">greeting</p>
+                </div>
+                <div class="flex">
+                    <div class="txtBox">
+                        <p class="txt">
+                            ホームページをご覧いただきまして、ありがとうございます。<br>
+                            <br>
+                            私たちは、和食と居酒屋の計4店舗を運営しており、和食店では法事などの特別な集まりにも対応しております。<br>
+                            お肉だけでなく、新鮮な刺身や焼き鳥など、皆様のお好みに合わせたメニューを豊富にご用意いたします。<br>
+                            <br>
+                            これからも、お客様に愛される店作りを目指してまいりますので、何かご希望がございましたら、どうぞお気軽にご相談ください。皆様のご来店を心よりお待ちしております。
+                        </p>
+                        <p class="txt nameTxt">代表　儀満 秀明</p>
+                    </div>
+                    <div class="imgBox">
+                        <img src={siteDomein + '20240729165306537859.png'} alt="ビルの外観画像" width="500" height="373" class="img">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="section linkSection">
+            <div class="sectionInr">
+                <div class="sectionHead">
+                    <h2 class="sectionHeadTtl">運営店舗</h2>
+                    <p class="sectionHeadDesc">stores operated</p>
+                </div>
+                <div class="linkBoxWrap">
+                    <div class="linkBox">
+                        <a href="./hikawahonten" class="imgLink">
+                            <img src={siteDomein + '20240729222939253378.png'} alt="背景用の画像" class="backImg" width="540" height="240" />
+                            <div class="decoration">
+                                <img src={siteDomein + '20240729222931188180.png'} alt="装飾用の画像" class="linkBoxImg topLeft" width="20" height="20">
+                                <img src={siteDomein + '20240729222931724061.png'} alt="装飾用の画像" class="linkBoxImg topRight" width="20" height="20">
+                                <img src={siteDomein + '20240729222931509875.png'} alt="装飾用の画像" class="linkBoxImg bottomRight" width="20" height="20">
+                                <img src={siteDomein + '20240729222931932358.png'} alt="装飾用の画像" class="linkBoxImg bottomLeft" width="20" height="20">
+                            </div>
+                            <div class="front">
+                                <img src={siteDomein + '20240806104613725596.png'} alt="華満斐川本店・ホテル華満 ロゴ画像" class="frontImg" width="215" height="119">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="linkBox">
+                        <a href="./izumoekimae" class="imgLink">
+                            <img src={siteDomein + '20240729222939277867.png'} alt="背景用の画像" class="backImg" width="540" height="240" />
+                            <div class="decoration">
+                                <img src={siteDomein + '20240729222931188180.png'} alt="装飾用の画像" class="linkBoxImg topLeft" width="20" height="20">
+                                <img src={siteDomein + '20240729222931724061.png'} alt="装飾用の画像" class="linkBoxImg topRight" width="20" height="20">
+                                <img src={siteDomein + '20240729222931509875.png'} alt="装飾用の画像" class="linkBoxImg bottomRight" width="20" height="20">
+                                <img src={siteDomein + '20240729222931932358.png'} alt="装飾用の画像" class="linkBoxImg bottomLeft" width="20" height="20">
+                            </div>
+                            <div class="front">
+                                <img src={siteDomein + '20240725232921696589.png'} alt="華満出雲駅前店 ロゴ画像" class="frontImg" width="165" height="114">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="linkBox">
+                        <a href="./wakaimon" class="imgLink">
+                            <img src={siteDomein + '20240729222939165301.png'} alt="背景用の画像" class="backImg" width="540" height="240" />
+                            <div class="decoration">
+                                <img src={siteDomein + '20240729222931188180.png'} alt="装飾用の画像" class="linkBoxImg topLeft" width="20" height="20">
+                                <img src={siteDomein + '20240729222931724061.png'} alt="装飾用の画像" class="linkBoxImg topRight" width="20" height="20">
+                                <img src={siteDomein + '20240729222931509875.png'} alt="装飾用の画像" class="linkBoxImg bottomRight" width="20" height="20">
+                                <img src={siteDomein + '20240729222931932358.png'} alt="装飾用の画像" class="linkBoxImg bottomLeft" width="20" height="20">
+                            </div>
+                            <div class="front">
+                                <img src={siteDomein + '20240725232921483993.png'} alt="居酒屋和皆門 ロゴ画像" class="frontImg" width="178" height="92">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="linkBox">
+                        <a href="./izumo" class="imgLink">
+                            <img src={siteDomein + '20240729222939819036.png'} alt="背景用の画像" class="backImg" width="540" height="240" />
+                            <div class="decoration">
+                                <img src={siteDomein + '20240729222931188180.png'} alt="装飾用の画像" class="linkBoxImg topLeft" width="20" height="20">
+                                <img src={siteDomein + '20240729222931724061.png'} alt="装飾用の画像" class="linkBoxImg topRight" width="20" height="20">
+                                <img src={siteDomein + '20240729222931509875.png'} alt="装飾用の画像" class="linkBoxImg bottomRight" width="20" height="20">
+                                <img src={siteDomein + '20240729222931932358.png'} alt="装飾用の画像" class="linkBoxImg bottomLeft" width="20" height="20">
+                            </div>
+                            <div class="front">
+                                <img src={siteDomein + '20240725232908133238.png'} alt="居酒屋いずも ロゴ画像" class="frontImg" width="179" height="101">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section sectionBg companySection">
+			<div class="sectionInr">
+				<div class="sectionHead">
+					<h2 class="sectionHeadTtl">
+						会社概要
+					</h2>
+					<p class="sectionHeadDesc">company</p>
+				</div>
+				<div class="data">
+					<div class="dataItem">
+						<p class="dataItemHead">名称</p>
+						<p class="txt">三昌株式会社</p>
+					</div>
+					<div class="dataItem">
+						<p class="dataItemHead">住所</p>
+						<p class="txt">〒691-0001 島根県出雲市平田町1502</p>
+					</div>
+					<div class="dataItem">
+						<p class="dataItemHead">TEL</p>
+						<a href="tel:0853622789">
+							<p class="txt">085-362-2789</p>
+						</a>
+					</div>
+					<div class="dataItem">
+						<p class="dataItemHead">代表</p>
+						<p class="txt">儀満 秀明</p>
+					</div>
+				</div>
+			</div>
+		</div>
+    </main>
+	<Footer />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+
+</html>
